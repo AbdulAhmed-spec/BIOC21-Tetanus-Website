@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400">
+  <defs><radialGradient id="bg"><stop stop-color="#203f68"/><stop offset="1" stop-color="#0b1428"/></radialGradient><radialGradient id="cell"><stop stop-color="#fff1ca"/><stop offset=".35" stop-color="#e3b9bd"/><stop offset="1" stop-color="#8b9ad5"/></radialGradient></defs>
+  <path fill="url(#bg)" d="M0 0h480v400H0z"/>
+  <g fill="none" stroke="#9ac9ed" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m158 200-45-50-53-15m53 15-8-65-30-37m30 37 43-40M145 210l-66 8-40 45m40-45-36-24M163 235l-38 63-65 39m65-39 2 55M190 190l16-70 49-52m-49 52-21-74M204 207l69-42 67-3m-67 3 19-54M205 234l60 46 40 70m-40-70 67 4"/>
+    <path d="M190 230c-10 72 27 113 93 100s99-26 141 10m-33-12 12-27m21 39 21-18m-21 18 6 30" stroke-width="7"/>
+  </g>
+  <path d="m170 182 25 14 17 27-18 30-36-2-15-30z" fill="url(#cell)" stroke="#d3d6f0" stroke-width="3"/>
+  <circle cx="178" cy="221" r="10" fill="#344b80"/>
+  <g fill="#fffce7"><circle cx="224" cy="320" r="5"/><circle cx="285" cy="329" r="5"/><circle cx="350" cy="319" r="5"/></g>
+</svg>

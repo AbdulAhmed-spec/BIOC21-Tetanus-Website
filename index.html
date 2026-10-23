@@ -1,97 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Meet the tiny bacteria behind tetanus. A BIOC21 group project exploring what tetanus is and how it enters the body.">
-    <meta name="theme-color" content="#0b0738">
-    <title>Tetanus | BIOC21</title>
-    <link rel="icon" href="assets/images/icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="BIOC21 home"><svg class="brand-symbol" aria-hidden="true" width="32" height="32" viewBox="0 0 32 32"><path d="M16 2v28M2 16h28M6 6l20 20M6 26L26 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><span>BIOC21<span class="brand-subtitle">TETANUS PROJECT</span></span></a>
-      <nav aria-label="Main navigation">
-        <a href="#home" aria-current="location">Home</a>
-        <a href="#about">About tetanus</a>
-        <a href="#watch">Watch</a>
-        <a href="#transmission">Transmission</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore tetanus: the bacteria, the nervous system, symptoms, affected tissues, and recovery. A BIOC21 group project for grades 7–8.">
+  <meta name="theme-color" content="#0b1428">
+  <title>Tetanus | BIOC21</title>
+  <link rel="icon" href="assets/images/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="BIOC21 home"><svg class="brand-symbol" aria-hidden="true" width="32" height="32" viewBox="0 0 32 32"><path d="M16 2v28M2 16h28M6 6l20 20M6 26L26 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><span>BIOC21<span class="brand-subtitle">TETANUS PROJECT</span></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">Explore</a><a href="#watch">Watch</a><a href="#transmission">Transmission</a><a href="#symptoms">Symptoms</a><a href="#tissues">Tissues</a><a href="#recovery">Recovery</a>
+    </nav>
+  </header>
 
-    <main id="main">
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="hero-background" aria-hidden="true" inert><div id="background-player"></div></div>
-        <div class="hero-shade"></div>
-        <div class="hero-content">
-          <p class="eyebrow">SMALL BACTERIA. BIG IMPACT.</p>
-          <h1 id="hero-title">TETANUS</h1>
-          <a class="pill" href="#about">Read the latest <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16"><path d="m4 4 8 8M4 12h8V4"/></svg></a>
-        </div>
-        <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" hidden>Play background video</button>
-        <p class="video-status" id="background-status" role="status"></p>
-      </section>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-background" aria-hidden="true" inert>
+        <video id="background-video" muted loop playsinline preload="none" poster="assets/images/synaptic-poster.jpg" data-src="assets/videos/synaptic-background.mp4" tabindex="-1"></video>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">SMALL BACTERIA. BIG IMPACT.</p>
+        <h1 id="hero-title">TETANUS</h1>
+        <p class="hero-subtitle">A tiny invader. A powerful toxin.<br>Let’s follow the science.</p>
+        <a class="pill" href="#about">Start exploring <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16"><path d="m4 4 8 8M4 12h8V4"/></svg></a>
+      </div>
+      <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" hidden>Play background video</button>
+      <p class="video-status" id="background-status" role="status"></p>
+    </section>
 
-      <section class="introduction" id="about" aria-label="About tetanus">
-        <div class="overview">
-          <span class="section-number">01 / MEET THE BACTERIA</span>
-          <h2>TETANUS</h2>
-          <p>Tetanus is an infection caused by a bacterium called <i>Clostridium tetani</i> (<i>C. tetani</i>), which is found in the environment. It is also known as <strong>“lockjaw”</strong> because it can cause the jaw and neck muscles to tighten, making it hard to open the mouth.</p>
-          <div class="bacteria-gallery">
-            <figure><img src="assets/images/bacteria-tissue.svg" alt="Illustration of green, rod-shaped bacteria near muscle fibres" width="480" height="400" loading="lazy"><figcaption>Bacteria in tissue · illustration</figcaption></figure>
-            <figure><img src="assets/images/bacteria-closeup.svg" alt="Illustration of rod-shaped Clostridium tetani with round spores at one end" width="480" height="400" loading="lazy"><figcaption>A closer look · illustration</figcaption></figure>
-          </div>
-          <p class="species"><i>Clostridium tetani</i></p>
-          <a class="pill pill-small" href="https://www.cdc.gov/tetanus/about/index.html" target="_blank" rel="noopener noreferrer">Click here to learn more <span class="sr-only">at the CDC (opens in a new tab)</span><svg class="arrow" aria-hidden="true" viewBox="0 0 16 16"><path d="m4 12 8-8M4 4h8v8"/></svg></a>
+    <section class="introduction" id="about" aria-label="About tetanus">
+      <div class="overview">
+        <span class="section-number">01 / MEET THE BACTERIA</span>
+        <h2>WHAT IS TETANUS?</h2>
+        <p>Tetanus is an infection caused by a bacterium called <i>Clostridium tetani</i> (<i>C. tetani</i>), which is found in the environment. It is also called <strong>“lockjaw”</strong> because it can cause the jaw and neck muscles to tighten, making it hard to open the mouth.</p>
+        <div class="bacteria-gallery">
+          <figure><img src="assets/images/bacteria-tissue.svg" alt="Illustration of green, rod-shaped bacteria near muscle fibres" width="480" height="400" loading="lazy"><figcaption>Bacteria in tissue · illustration</figcaption></figure>
+          <figure><img src="assets/images/bacteria-closeup.svg" alt="Illustration of rod-shaped Clostridium tetani with round spores at one end" width="480" height="400" loading="lazy"><figcaption>A closer look · illustration</figcaption></figure>
         </div>
-        <div class="types">
-          <span class="section-number">02 / FOUR DIFFERENT FORMS</span>
-          <h2>THE DIFFERENT TYPES OF TETANUS</h2>
-          <ol>
-            <li><strong>Generalized:</strong> This is the most common type. It causes muscle stiffness and spasms throughout the body, often starting in the jaw and neck.</li>
-            <li><strong>Neonatal:</strong> Affects newborns in their first 28 days of life. It can happen when a mother is not protected by vaccination and bacteria enter through the baby’s umbilical cord stump.</li>
-            <li><strong>Localized:</strong> Causes muscle spasms near the area where the bacteria entered the body. It is uncommon, but it can develop into generalized tetanus.</li>
-            <li><strong>Cephalic:</strong> A rare form affecting nerves in the head, often after a head injury. It can affect muscles in the face.</li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="watch" id="watch" aria-labelledby="watch-title">
-        <div class="watch-heading"><span class="section-number">03 / SEE IT HAPPEN</span><h2 id="watch-title">A TINY INVADER, UP CLOSE</h2></div>
-        <div class="video-frame">
-          <!-- Configure a direct MP4 URL in script.js. This player does not use YouTube. -->
-          <video id="explainer-video" controls playsinline preload="metadata" poster="assets/images/wound.svg" aria-label="Tetanus explainer video" hidden>Your browser does not support HTML video.</video>
-          <div class="video-placeholder" id="video-placeholder">
-            <span class="play-symbol" aria-hidden="true"><svg width="24" height="28" viewBox="0 0 24 28"><path d="m2 2 20 12L2 26Z" fill="currentColor"/></svg></span>
-            <h3>Video coming soon</h3>
-            <p>Our tetanus explainer will appear here.</p>
-          </div>
-        </div>
-        <p class="watch-caption" id="watch-caption">Press play and explore how tetanus enters the body. Video file coming soon.</p>
-        <noscript><p class="watch-caption">Enable JavaScript to load video playback. The rest of the page works without it.</p></noscript>
-      </section>
-
-      <section class="transmission" id="transmission" aria-labelledby="transmission-title">
-        <span class="section-number">04 / HOW IT GETS IN</span>
-        <h2 id="transmission-title">HOW IS TETANUS TRANSMITTED?</h2>
-        <div class="transmission-copy">
-          <p>The bacteria’s <strong>spores</strong> enter someone’s body through a break in the skin, like a cut or puncture wound.</p>
-          <p>In the right conditions, the spores become active bacteria and make a poison called <strong>tetanus toxin</strong>, also known as <strong>tetanospasmin</strong>.</p>
-        </div>
-        <ol class="transmission-steps">
-          <li><img src="assets/images/spores.svg" alt="Illustration of bacterial spores in soil above the skin" width="480" height="400" loading="lazy"><span><b>01</b> Spores in the environment</span></li>
-          <li><img src="assets/images/wound.svg" alt="Illustration of spores entering a break in the skin" width="480" height="400" loading="lazy"><span><b>02</b> A way into the body</span></li>
-          <li><img src="assets/images/bacteria-tissue.svg" alt="Illustration of bacteria near muscle tissue" width="480" height="400" loading="lazy"><span><b>03</b> Bacteria become active</span></li>
-          <li><img src="assets/images/toxin.svg" alt="Illustration of toxin particles released by a bacterium" width="480" height="400" loading="lazy"><span><b>04</b> Toxin is released</span></li>
+        <p class="species"><i>Clostridium tetani</i></p>
+        <a class="text-link" href="https://www.cdc.gov/tetanus/about/index.html" target="_blank" rel="noopener noreferrer">Learn more at the CDC <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+      <div class="types">
+        <span class="section-number">02 / FOUR DIFFERENT FORMS</span>
+        <h2>THE DIFFERENT TYPES OF TETANUS</h2>
+        <ol class="type-list">
+          <li><strong>Generalized</strong><p>The most common type. Muscle stiffness and spasms affect the body, often starting in the jaw and neck.</p></li>
+          <li><strong>Neonatal</strong><p>Affects newborns in their first 28 days of life. It can happen when a mother is not protected by vaccination and bacteria enter through the baby’s umbilical cord stump.</p></li>
+          <li><strong>Localized</strong><p>Muscle spasms occur near the area where the bacteria entered. This uncommon form can develop into generalized tetanus.</p></li>
+          <li><strong>Cephalic</strong><p>A rare form affecting nerves in the head, often after a head injury. It can affect muscles in the face.</p></li>
         </ol>
-        <p class="illustration-note">Simplified illustrations. Original project images coming soon.</p>
-        <p class="takeaway">Good to know: tetanus does not spread from person to person.</p>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer><a class="footer-brand" href="#home">BIOC21</a><p>Tetanus group project · More to explore soon.</p><a href="https://www.cdc.gov/tetanus/about/index.html" target="_blank" rel="noopener noreferrer">Learn more at the CDC <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16"><path d="m4 12 8-8M4 4h8v8"/></svg><span class="sr-only"> (opens in a new tab)</span></a></footer>
-  </body>
+    <section class="watch section-pad" id="watch" aria-labelledby="watch-title">
+      <div class="section-heading"><div><span class="section-number">03 / SEE IT HAPPEN</span><h2 id="watch-title">UNDER THE SKIN</h2></div><p>See how the body responds<br>when the skin is injured.</p></div>
+      <div class="video-frame">
+        <video id="explainer-video" controls playsinline preload="metadata" poster="assets/images/wound-poster.jpg" aria-label="Skin wound inflammation, narrated animation" aria-describedby="watch-caption">
+          <source src="assets/videos/wound-inflammation.mp4" type="video/mp4">
+          Your browser does not support HTML video. <a href="assets/videos/wound-inflammation.mp4">Download the video</a>.
+        </video>
+        <p class="media-error" id="explainer-error" role="status" hidden>The video could not load. <a href="assets/videos/wound-inflammation.mp4">Open the video file</a>.</p>
+      </div>
+      <p class="watch-caption" id="watch-caption"><strong>Skin Wound Inflammation</strong> · Drew Berry, WEHI.TV (2014). This narrated animation shows general wound inflammation; it is not a tetanus-specific animation.</p>
+    </section>
+
+    <section class="transmission section-pad" id="transmission" aria-labelledby="transmission-title">
+      <span class="section-number">04 / HOW IT GETS IN</span>
+      <h2 id="transmission-title">HOW IS TETANUS TRANSMITTED?</h2>
+      <div class="transmission-copy">
+        <p>The bacteria’s <strong>spores</strong> enter the body through a break in the skin, like a cut or puncture wound.</p>
+        <p>In low-oxygen conditions, the spores can become active bacteria. They make a poison called <strong>tetanus toxin</strong>, also known as <strong>tetanospasmin</strong>.</p>
+      </div>
+      <ol class="image-steps">
+        <li><img src="assets/images/spores.svg" alt="Illustration of bacterial spores in soil above the skin" width="480" height="400" loading="lazy"><span><b>01</b> Spores in the environment</span></li>
+        <li><img src="assets/images/wound.svg" alt="Illustration of spores entering a break in the skin" width="480" height="400" loading="lazy"><span><b>02</b> A way into the body</span></li>
+        <li><img src="assets/images/bacteria-tissue.svg" alt="Illustration of bacteria near muscle tissue" width="480" height="400" loading="lazy"><span><b>03</b> Bacteria become active</span></li>
+        <li><img src="assets/images/toxin.svg" alt="Illustration of toxin particles released by a bacterium" width="480" height="400" loading="lazy"><span><b>04</b> Toxin is released</span></li>
+      </ol>
+      <p class="takeaway">Tetanus does <strong>not</strong> spread from person to person.</p>
+    </section>
+
+    <section class="nerve-path section-pad" id="nervous-system" aria-labelledby="nerve-title">
+      <span class="section-number">05 / FOLLOW THE TOXIN</span>
+      <h2 id="nerve-title">FROM THE WOUND TO THE NERVOUS SYSTEM</h2>
+      <div class="transmission-copy">
+        <p>The toxin enters the endings of <strong>motor neurons</strong>—nerve cells that help tell our muscles to move.</p>
+        <p>It travels along nerves to the <strong>spinal cord and brainstem</strong>, where it blocks signals that normally help muscles relax.</p>
+      </div>
+      <ol class="image-steps nerve-steps">
+        <li><img src="assets/images/bacteria-tissue.svg" alt="Illustration of bacteria in tissue at the wound" width="480" height="400" loading="lazy"><span><b>01</b> Toxin made at the wound</span></li>
+        <li><img src="assets/images/motor-neuron.svg" alt="Simplified motor neuron with branching nerve endings and a long axon" width="480" height="400" loading="lazy"><span><b>02</b> Taken into nerve endings</span></li>
+        <li><img src="assets/images/spinal-cord.svg" alt="Simplified spinal cord and branching nerves" width="480" height="400" loading="lazy"><span><b>03</b> Travels toward the spinal cord</span></li>
+        <li><img src="assets/images/brain.svg" alt="Simplified brain and brainstem with nerve connections" width="480" height="400" loading="lazy"><span><b>04</b> Relaxation signals are blocked</span></li>
+      </ol>
+      <p class="illustration-note">Diagrams are simplified illustrations, not microscope images.</p>
+      <div class="key-idea"><span class="key-label">THE KEY IDEA</span><p>Without the “relax” message, muscles can stay tight and go into painful spasms.</p></div>
+    </section>
+
+    <section class="symptoms section-pad" id="symptoms" aria-labelledby="symptoms-title">
+      <span class="section-number">06 / SIGNS &amp; EFFECTS</span>
+      <h2 id="symptoms-title">WHAT HAPPENS TO THE BODY?</h2>
+      <div class="symptom-grid">
+        <article class="info-card">
+          <span class="card-tag">WHAT SOMEONE MAY FEEL</span><h3>SYMPTOMS</h3>
+          <ul class="symptom-list">
+            <li>Trouble swallowing</li>
+            <li>Sudden, involuntary muscle spasms, often in the stomach</li>
+            <li>Painful muscle stiffness, including a tight jaw</li>
+            <li>Seizures (jerking or staring)</li>
+            <li>Headache</li>
+            <li>Fever and sweating</li>
+            <li>Changes in blood pressure and heart rate</li>
+          </ul>
+          <p class="timing"><strong>When do symptoms start?</strong><br>Usually about <strong>3–21 days</strong> after exposure, often around 8 days. Timing can vary.</p>
+        </article>
+        <article class="info-card complications">
+          <span class="card-tag">WHEN THE ILLNESS BECOMES SEVERE</span><h3>COMPLICATIONS</h3>
+          <ul>
+            <li><strong>Laryngospasm:</strong> the vocal cords suddenly tighten, which can make breathing difficult.</li>
+            <li><strong>Fractures:</strong> very strong muscle spasms can break bones.</li>
+            <li><strong>Pulmonary embolism:</strong> a blood clot blocks a blood vessel in the lungs.</li>
+            <li><strong>Aspiration pneumonia:</strong> a lung infection after saliva or vomit enters the lungs.</li>
+            <li><strong>Breathing problems:</strong> affected muscles can make it hard to breathe.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="care-note"><strong>Tetanus is a medical emergency.</strong> Trouble breathing or swallowing with suspected tetanus needs urgent medical care.</p>
+    </section>
+
+    <section class="tissues section-pad" id="tissues" aria-labelledby="tissues-title">
+      <div class="tissue-copy">
+        <span class="section-number">07 / ZOOMING IN</span>
+        <h2 id="tissues-title">WHICH TISSUES ARE AFFECTED?</h2>
+        <dl class="tissue-list">
+          <div><dt>Nervous tissue</dt><dd>The toxin’s main target. It disrupts nerve signals that help muscles relax.</dd></div>
+          <div><dt>Muscle tissue</dt><dd>Muscles are affected because of the disrupted nerve signals. Skeletal muscles, facial muscles, and muscles used for breathing can become stiff or spasm.</dd></div>
+          <div><dt>Damaged or dead tissue</dt><dd>Low-oxygen areas in a wound can let <i>C. tetani</i> grow and produce toxin. “Anaerobic” means without oxygen.</dd></div>
+        </dl>
+      </div>
+      <figure class="microscope-card">
+        <div class="micrograph"><img src="assets/images/bacteria-closeup.svg" alt="Simplified illustration of Clostridium tetani rods with a rounded spore at one end" width="480" height="400" loading="lazy"><span class="micro-circle" aria-hidden="true"></span></div>
+        <div class="zoom-row"><span class="zoom-line" aria-hidden="true"></span><img src="assets/images/bacteria-closeup.svg" alt="Enlarged illustration of the round spores at the ends of the bacteria" width="480" height="400" loading="lazy"></div>
+        <figcaption>A closer look at <i>Clostridium tetani</i> · illustration</figcaption>
+      </figure>
+    </section>
+
+    <section class="recovery section-pad" id="recovery" aria-labelledby="recovery-title">
+      <div class="recovery-heading"><span class="section-number">08 / THE ROAD TO RECOVERY</span><h2 id="recovery-title">PROGNOSIS</h2><p class="section-intro">Prognosis means the likely course of an illness—and the chances of recovery.</p><a class="pill" href="https://www.cdc.gov/tetanus/about/index.html" target="_blank" rel="noopener noreferrer">Learn more at the CDC<span class="sr-only"> (opens in a new tab)</span></a></div>
+      <div class="recovery-content">
+        <h3>RECOVERY TAKES TIME</h3>
+        <ul>
+          <li>Tetanus can be life-threatening, but people can recover with proper treatment. Hospital care is needed.</li>
+          <li>Recovery depends on factors such as age, how severe the illness is, and how quickly treatment starts.</li>
+          <li>A short time between the wound and symptoms can be a sign of more severe illness.</li>
+          <li>Spasms and other symptoms can last for weeks. Full recovery may take several months.</li>
+          <li>Having tetanus does not give lasting immunity. Vaccination is still important after recovery.</li>
+        </ul>
+        <p class="recovery-highlight">The sooner someone gets treatment, the better.</p>
+      </div>
+    </section>
+
+    <section class="updates section-pad" id="updates" aria-labelledby="updates-title">
+      <aside class="remember-card"><span class="section-number">TAKE THIS WITH YOU</span><h2>THE “RELAX” MESSAGE MATTERS.</h2><div class="signal-diagram" aria-label="Tetanus toxin blocks relaxation signals, causing tight muscles"><span>Toxin</span><span aria-hidden="true">→</span><span>Relax signal blocked</span><span aria-hidden="true">→</span><span>Tight muscles</span></div><p>It is the toxin’s effect on nerves that causes the muscle symptoms.</p></aside>
+      <div class="updates-copy"><span class="section-number">OUR PROJECT KEEPS GROWING</span><h2 id="updates-title">STAY IN THE LOOP</h2><p>More explanations, images, and project updates are on the way. Come back to explore what we add next.</p><span class="coming-soon">More updates coming soon</span><a class="text-link" href="#home">Back to the top ↑</a></div>
+    </section>
+
+    <section class="sources section-pad" id="sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">SOURCES &amp; MEDIA</h2>
+      <div class="sources-grid">
+        <div><h3>Keep learning</h3><ul><li><a href="https://www.cdc.gov/tetanus/about/index.html" target="_blank" rel="noopener noreferrer">CDC: About tetanus<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://www.cdc.gov/tetanus/hcp/clinical-signs/index.html" target="_blank" rel="noopener noreferrer">CDC: Clinical features of tetanus<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://www.who.int/news-room/fact-sheets/detail/tetanus" target="_blank" rel="noopener noreferrer">WHO: Tetanus fact sheet<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
+        <div><h3>Video credits</h3><p>Background: synaptic transmission animation, Hybrid Medical Animation. <a href="https://www.youtube.com/shorts/2MG2WOAfL5A" target="_blank" rel="noopener noreferrer">Original video<span class="sr-only"> (opens in a new tab)</span></a>.</p><p>Player: <i>Skin Wound Inflammation</i>, Drew Berry / WEHI.TV, 2014. <a href="https://www.youtube.com/watch?v=8NWHKJgNfdI" target="_blank" rel="noopener noreferrer">Original video<span class="sr-only"> (opens in a new tab)</span></a>.</p><p>Both animations explain general biology. Diagrams on this page are simplified illustrations.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer><a class="footer-brand" href="#home">BIOC21</a><p>Small bacteria. Big impact. A group project for curious minds.</p><a href="#sources">Sources &amp; media</a></footer>
+</body>
 </html>

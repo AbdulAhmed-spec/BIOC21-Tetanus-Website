@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 480 400">
+  <defs><radialGradient id="bg"><stop stop-color="#243956"/><stop offset="1" stop-color="#0b1428"/></radialGradient><linearGradient id="brain" x2=".7" y2="1"><stop stop-color="#efc9c2"/><stop offset="1" stop-color="#c68f9c"/></linearGradient></defs>
+  <path fill="url(#bg)" d="M0 0h480v400H0z"/>
+  <path d="m261 253 14 58 22 48" fill="none" stroke="#9ac9ed" stroke-width="26" stroke-linecap="round"/>
+  <path d="M86 195c-13-28 0-58 24-70-1-36 25-58 56-57 14-30 56-36 79-19 32-14 69 1 79 24 39-5 69 27 65 57 29 19 36 54 18 79 5 36-25 61-62 60-23 26-61 27-86 4-19 15-52 14-70-5-35 12-69-6-75-33-18-3-30-19-28-40Z" fill="url(#brain)" stroke="#f3d8cf" stroke-width="3"/>
+  <g fill="none" stroke="#916f8e" stroke-width="5" stroke-linecap="round"><path d="M111 146q39-26 62 9t58-4M137 108q39 11 36 47t-31 42M190 74q-12 31 16 37t25 40-10 48M247 79q40-5 33 34t38 29 30 44M301 92q-13 29 17 50t-12 61M367 133q-33-9-49 9M112 216q30-28 64-5t57 17M178 254q-15-35 22-43t21-51M268 154q-29 29-7 51t-6 35M363 225q-16-37-57-22t-24 41"/></g>
+  <g fill="#fffce7"><circle cx="173" cy="155" r="6"/><circle cx="261" cy="205" r="6"/><circle cx="318" cy="142" r="6"/></g>
+</svg>
