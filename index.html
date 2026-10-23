@@ -3,42 +3,95 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BIOC21 Tetanus group project — coming soon.">
-    <title>BIOC21 Tetanus Project</title>
-    <style>
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        min-height: 100svh;
-        display: grid;
-        place-items: center;
-        padding: 24px;
-        background: #eff6ff;
-        color: #16324f;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-      main {
-        width: 100%;
-        max-width: 720px;
-        padding: clamp(32px, 8vw, 72px);
-        border: 1px solid #dbeafe;
-        border-radius: 24px;
-        background: #ffffff;
-        box-shadow: 0 16px 48px rgb(22 50 79 / 8%);
-        text-align: center;
-      }
-      h1 {
-        margin: 0;
-        font-size: clamp(28px, 5vw, 44px);
-        line-height: 1.25;
-        font-weight: 700;
-      }
-    </style>
+    <meta name="description" content="Meet the tiny bacteria behind tetanus. A BIOC21 group project exploring what tetanus is and how it enters the body.">
+    <meta name="theme-color" content="#0b0738">
+    <title>Tetanus | BIOC21</title>
+    <link rel="icon" href="assets/images/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <main>
-      <h1>BIOC21 Tetanus project in progress</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="BIOC21 home"><svg class="brand-symbol" aria-hidden="true" width="32" height="32" viewBox="0 0 32 32"><path d="M16 2v28M2 16h28M6 6l20 20M6 26L26 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><span>BIOC21<span class="brand-subtitle">TETANUS PROJECT</span></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#home" aria-current="location">Home</a>
+        <a href="#about">About tetanus</a>
+        <a href="#watch">Watch</a>
+        <a href="#transmission">Transmission</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-background" aria-hidden="true" inert><div id="background-player"></div></div>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">SMALL BACTERIA. BIG IMPACT.</p>
+          <h1 id="hero-title">TETANUS</h1>
+          <a class="pill" href="#about">Read the latest <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16"><path d="m4 4 8 8M4 12h8V4"/></svg></a>
+        </div>
+        <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" hidden>Play background video</button>
+        <p class="video-status" id="background-status" role="status"></p>
+      </section>
+
+      <section class="introduction" id="about" aria-label="About tetanus">
+        <div class="overview">
+          <span class="section-number">01 / MEET THE BACTERIA</span>
+          <h2>TETANUS</h2>
+          <p>Tetanus is an infection caused by a bacterium called <i>Clostridium tetani</i> (<i>C. tetani</i>), which is found in the environment. It is also known as <strong>“lockjaw”</strong> because it can cause the jaw and neck muscles to tighten, making it hard to open the mouth.</p>
+          <div class="bacteria-gallery">
+            <figure><img src="assets/images/bacteria-tissue.svg" alt="Illustration of green, rod-shaped bacteria near muscle fibres" width="480" height="400" loading="lazy"><figcaption>Bacteria in tissue · illustration</figcaption></figure>
+            <figure><img src="assets/images/bacteria-closeup.svg" alt="Illustration of rod-shaped Clostridium tetani with round spores at one end" width="480" height="400" loading="lazy"><figcaption>A closer look · illustration</figcaption></figure>
+          </div>
+          <p class="species"><i>Clostridium tetani</i></p>
+          <a class="pill pill-small" href="https://www.cdc.gov/tetanus/about/index.html" target="_blank" rel="noopener noreferrer">Click here to learn more <span class="sr-only">at the CDC (opens in a new tab)</span><svg class="arrow" aria-hidden="true" viewBox="0 0 16 16"><path d="m4 12 8-8M4 4h8v8"/></svg></a>
+        </div>
+        <div class="types">
+          <span class="section-number">02 / FOUR DIFFERENT FORMS</span>
+          <h2>THE DIFFERENT TYPES OF TETANUS</h2>
+          <ol>
+            <li><strong>Generalized:</strong> This is the most common type. It causes muscle stiffness and spasms throughout the body, often starting in the jaw and neck.</li>
+            <li><strong>Neonatal:</strong> Affects newborns in their first 28 days of life. It can happen when a mother is not protected by vaccination and bacteria enter through the baby’s umbilical cord stump.</li>
+            <li><strong>Localized:</strong> Causes muscle spasms near the area where the bacteria entered the body. It is uncommon, but it can develop into generalized tetanus.</li>
+            <li><strong>Cephalic:</strong> A rare form affecting nerves in the head, often after a head injury. It can affect muscles in the face.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="watch" id="watch" aria-labelledby="watch-title">
+        <div class="watch-heading"><span class="section-number">03 / SEE IT HAPPEN</span><h2 id="watch-title">A TINY INVADER, UP CLOSE</h2></div>
+        <div class="video-frame">
+          <!-- Configure a direct MP4 URL in script.js. This player does not use YouTube. -->
+          <video id="explainer-video" controls playsinline preload="metadata" poster="assets/images/wound.svg" aria-label="Tetanus explainer video" hidden>Your browser does not support HTML video.</video>
+          <div class="video-placeholder" id="video-placeholder">
+            <span class="play-symbol" aria-hidden="true"><svg width="24" height="28" viewBox="0 0 24 28"><path d="m2 2 20 12L2 26Z" fill="currentColor"/></svg></span>
+            <h3>Video coming soon</h3>
+            <p>Our tetanus explainer will appear here.</p>
+          </div>
+        </div>
+        <p class="watch-caption" id="watch-caption">Press play and explore how tetanus enters the body. Video file coming soon.</p>
+        <noscript><p class="watch-caption">Enable JavaScript to load video playback. The rest of the page works without it.</p></noscript>
+      </section>
+
+      <section class="transmission" id="transmission" aria-labelledby="transmission-title">
+        <span class="section-number">04 / HOW IT GETS IN</span>
+        <h2 id="transmission-title">HOW IS TETANUS TRANSMITTED?</h2>
+        <div class="transmission-copy">
+          <p>The bacteria’s <strong>spores</strong> enter someone’s body through a break in the skin, like a cut or puncture wound.</p>
+          <p>In the right conditions, the spores become active bacteria and make a poison called <strong>tetanus toxin</strong>, also known as <strong>tetanospasmin</strong>.</p>
+        </div>
+        <ol class="transmission-steps">
+          <li><img src="assets/images/spores.svg" alt="Illustration of bacterial spores in soil above the skin" width="480" height="400" loading="lazy"><span><b>01</b> Spores in the environment</span></li>
+          <li><img src="assets/images/wound.svg" alt="Illustration of spores entering a break in the skin" width="480" height="400" loading="lazy"><span><b>02</b> A way into the body</span></li>
+          <li><img src="assets/images/bacteria-tissue.svg" alt="Illustration of bacteria near muscle tissue" width="480" height="400" loading="lazy"><span><b>03</b> Bacteria become active</span></li>
+          <li><img src="assets/images/toxin.svg" alt="Illustration of toxin particles released by a bacterium" width="480" height="400" loading="lazy"><span><b>04</b> Toxin is released</span></li>
+        </ol>
+        <p class="illustration-note">Simplified illustrations. Original project images coming soon.</p>
+        <p class="takeaway">Good to know: tetanus does not spread from person to person.</p>
+      </section>
     </main>
+
+    <footer><a class="footer-brand" href="#home">BIOC21</a><p>Tetanus group project · More to explore soon.</p><a href="https://www.cdc.gov/tetanus/about/index.html" target="_blank" rel="noopener noreferrer">Learn more at the CDC <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16"><path d="m4 12 8-8M4 4h8v8"/></svg><span class="sr-only"> (opens in a new tab)</span></a></footer>
   </body>
 </html>
