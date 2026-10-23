@@ -20,18 +20,18 @@ h3{font-size:30px;margin:0 0 20px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .skip-link{position:fixed;z-index:20;top:8px;left:8px;padding:12px 20px;background:var(--cream);color:var(--navy);transform:translateY(-160%)}
 .skip-link:focus{transform:translateY(0)}
-.site-header{min-height:76px;max-width:1320px;margin:auto;padding:15px 4%;display:flex;align-items:center;justify-content:space-between;gap:24px;background:var(--navy)}
+.site-header{min-height:76px;width:100%;padding:15px 4%;display:flex;align-items:center;justify-content:space-between;gap:24px;background:var(--navy)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Arial,sans-serif;font-size:14px;letter-spacing:1.7px;font-weight:700;flex-shrink:0}
 .brand-symbol{color:var(--blue)}
 .brand-subtitle{display:block;font-size:7px;letter-spacing:1px;margin-top:4px;color:var(--muted)}
 nav{display:flex;flex-wrap:wrap;gap:clamp(12px,2vw,26px);font-family:Arial,sans-serif;font-size:12px}
 nav a{text-decoration:none;color:var(--muted);padding:10px 0}
 nav a:hover,nav a[aria-current]{color:var(--cream);text-decoration:underline}
-main,footer{max-width:1320px;margin:auto}
+main,footer{width:100%;margin:0}
 main{background:var(--navy)}
 .section-pad{padding:64px 5.5%;border-top:1px solid var(--line)}
 .section-number,.eyebrow,.card-tag,.key-label{display:block;font-family:Arial,sans-serif;font-size:10px;letter-spacing:2.2px;line-height:1.6;color:var(--blue);margin:0 0 22px}
-.hero{position:relative;isolation:isolate;width:100%;min-height:580px;aspect-ratio:16/9;display:grid;place-items:center;overflow:hidden;background:#122a44 url('assets/images/synaptic-poster.jpg') center 40%/cover}
+.hero{position:relative;isolation:isolate;width:100%;min-height:580px;height:calc(100svh - 76px);display:grid;place-items:center;overflow:hidden;background:#122a44 url('assets/images/synaptic-poster.jpg') center 40%/cover}
 .hero-background,.hero-shade{position:absolute;inset:0;z-index:-1;pointer-events:none}
 #background-video{display:block;width:100%;height:100%;object-fit:cover;object-position:center 40%}
 .hero-shade{background:linear-gradient(180deg,#0b142844,#0b142866 45%,#0b1428d9)}
@@ -144,12 +144,16 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
 footer{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 5.5%;font-size:15px;color:var(--muted);background:var(--navy);border-top:1px solid var(--line)}
 footer p{margin:0}
 .footer-brand{font-family:Lilita,sans-serif;font-size:23px;color:var(--cream);text-decoration:none}
+/* Let backgrounds fill desktop screens while keeping long text easy to read. */
+@media(min-width:901px){
+  .overview>p,.type-list,.tissue-list,.recovery-content,.updates-copy>p,.info-card ul,.sources-grid p{max-width:65ch}
+}
 @media(max-width:900px){.site-header{flex-direction:column;gap:10px;padding:18px 20px 12px}nav{justify-content:center;gap:20px}.section-pad{padding:44px 5%}.overview,.types{padding:40px 9%}.symptom-grid{gap:18px}.info-card{padding:25px}.tissues,.recovery,.updates{gap:5%}.image-steps{gap:16px}.section-heading>p{font-size:18px}}
 @media(max-width:640px){
   body{font-size:21px}
   nav{gap:6px 18px;font-size:11px}
   .section-pad{padding:38px 24px}
-  .hero{min-height:560px;aspect-ratio:auto}
+  .hero{min-height:560px;height:auto}
   .hero-content{padding:60px 14px 100px}
   .eyebrow{font-size:9px;letter-spacing:2px}
   h1{font-size:clamp(64px,17vw,110px)}
