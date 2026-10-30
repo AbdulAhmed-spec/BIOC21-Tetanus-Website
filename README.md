@@ -1,32 +1,49 @@
-# BIOC21 Tetanus Website
+# BIOC21 — Tetanus, up close
 
-A static, responsive group project for grades 7–8. No build step or package installation is needed. GitHub Pages publishes from `main`, `/ (root)`.
+A static science website for grades 7–8. No build step or app dependencies. Make and review future changes locally; push or publish only when the user explicitly requests it.
 
-## Preview and edit
+## Style and information design
 
-Run `python3 -m http.server 8000` in this directory for a basic preview. For video seeking, use a static server with HTTP byte-range support, as GitHub Pages provides; Python’s basic server does not provide that support. Relative asset paths also support the GitHub Pages project URL.
+The former sequence of long, slide-like sections is now a five-topic explorer:
 
-- `index.html`: text, section order, sources, image paths and video paths.
-- `styles.css`: the shared nervous-system theme. Midnight backgrounds, cornflower blue and cream accents, fine nerve patterns, rounded cards and consistent headings. The palette lives in `:root`.
-- `script.js`: background playback and navigation highlighting.
-- `assets/images`: simplified illustrations and posters extracted from the supplied videos. Illustrations are labeled and are not presented as micrographs. Original Canva images and the meme can replace the illustrations/remember card when supplied separately.
-- `assets/fonts`: self-hosted Lilita One and Barlow Condensed with licenses.
+1. What is tetanus? — the bacterium, toxin, spores, and lockjaw.
+2. How does it work? — a visual wound-to-nerve pathway and comparison of usual and disrupted signals.
+3. What does it do? — a body diagram and three key symptom explanations.
+4. Can people recover? — a short care/recovery/prevention sequence.
+5. What’s under the skin? — the existing narrated wound animation with an observation prompt.
 
-## Local videos
+Each topic starts with short, plain-language text and a visual. Scientific terms, the four tetanus forms, tissues, other symptoms, complications, and prognosis remain available in native “Go deeper” disclosures. This is information navigation, not a learning game or quiz. The game remains an “in progress” banner.
 
-Both videos are hosted as ordinary files; neither uses a YouTube embed, tracking script or iframe.
+The site remains full width. Midnight backgrounds, pale reading panels, sky blue, mint and lime accents, and consistent heading styles replace the presentation layout. Lilita One is used for headings and self-hosted DM Sans for readable body text. Font licenses are in `assets/fonts`.
 
-- `assets/videos/synaptic-background.mp4`: the supplied 19-second synaptic-transmission video. Audio was removed from the background copy and the MP4 was remuxed for fast startup; the video was not re-encoded. It loops silently only while the opening section is visible and the tab is active. A pause/play button is available. Reduced-motion preferences show a poster until the visitor opts to play. Portrait footage fills the opening section with `object-fit: cover`; its original framing remains in the video file.
-- `assets/videos/wound-inflammation.mp4`: the supplied narrated 96-second wound video, with audio preserved, remuxed for fast startup. The native player supports play/pause, seeking, volume and fullscreen. It works without JavaScript. It shows **general wound inflammation**, not a tetanus-specific process. A captions file has not been supplied; add a WebVTT `<track kind="captions">` when an accurate transcript is available.
+## Editing
 
-Credits and original links are in the Sources & Media section. The uploaded files remain unchanged in the attachments directory; only website copies were prepared. Each video is below GitHub's 100 MB per-file limit.
+- `index.html`: content, illustrations, source links, and native video markup.
+- `styles.css`: palette in `:root`, full-width layout, topic navigation, reading panels and media styles.
+- `script.js`: topic selection, keyboard navigation, hash/deep-link handling, and video visibility logic.
+- `assets/images`: illustrations and posters. Drawings are labeled as illustrations rather than micrographs.
+- `assets/videos`: the two previously supplied MP4 files, unchanged by this redesign.
 
-## Content notes
+Topic navigation is progressively enhanced: anchors become ARIA tabs with arrow, Home/End, Enter and Space support. One panel is shown at a time when JavaScript is available. All five articles are visible with ordinary document links when JavaScript is disabled. Details can be opened with a keyboard. Existing topic hashes, including `#tissues` and `#nervous-system`, reveal the correct article; direct links to details open their content.
 
-The new sections cover the toxin's route through nerves, symptoms and complications, affected tissues, prognosis, and project updates. The toxin affects nervous tissue; muscle symptoms follow disrupted nerve signals. The incubation wording uses the usual 3–21-day range. The screenshot's unsupported 75% fatality statistic was omitted because it needs a specific source and clinical context. General information links to CDC and WHO resources; those external sites could not be retrieved from this execution environment, so a live review of their pages was not performed. Have your group review references and final wording before presenting.
+## Preview
 
-The "Stay in the loop" section says updates are coming soon. It does not collect email addresses or pretend to subscribe anyone. A working mailing list needs an actual service and endpoint. No additional brain video was supplied for the play icon in the new screenshot; the corresponding brain illustration is static.
+Use a static HTTP server in this directory. Python’s `python3 -m http.server 8000` provides a basic preview, but video seeking needs HTTP byte-range support, as GitHub Pages provides. Review screenshots are saved outside the repository under `/workspace/scratch/tetanus-style-review`.
 
-## Validation
+When publication is explicitly requested, GitHub Pages uses `main`, `/ (root)`. The stylesheet and script have versioned URLs so a future publication does not reuse stale browser-cached assets.
 
-Chromium checks passed at 320, 390, 768 and 1320 pixels: no horizontal overflow, all images load, internal section links work, and navigation highlights update. Actual MP4 playback, pause and seeking were verified using a server with byte-range support. Background autoplay, manual pause/play, offscreen pause/resume, visibility-change handling, and reduced-motion opt-in passed. The page made no external media requests and reported no JavaScript errors. Content and the native player remain available without JavaScript.
+## Videos and accessibility
+
+Both videos use local files and no YouTube iframe or API. The muted synaptic background loops only while the hero is visible and the tab is active; visitors can pause it. Reduced-motion preferences leave it on its poster until the visitor opts in. The narrated video keeps native playback, seeking, sound and fullscreen controls, and pauses when the student leaves the Watch topic. It works without JavaScript.
+
+The wound video shows general inflammation, not a tetanus-specific process. Credits and original links remain in Sources & Video Credits. Captions have not been supplied; add an accurate WebVTT track when available. A technical failure shows a message and a direct video link.
+
+## Content and remaining work
+
+The style revision preserves the major scientific explanations while shortening the initial reading. General information links to CDC and WHO resources. Unsupported fatality percentages remain omitted. Have the group review final medical wording and sources before presenting.
+
+The game, quizzes, newsletter service and new learning activities have not been added. Exact Ontario curriculum expectation mapping remains separate work: the official Ontario curriculum site returned HTTP 403 in this execution environment, so no unverified expectation codes or alignment claims have been added.
+
+## Local validation
+
+Chromium checks passed at 1366, 1920 and 2560 pixels, with a smaller-window regression check. All five topics select correctly, only one panel is visible, all illustration files load, disclosures open, keyboard tab selection works, and deep links reveal their destinations. The actual narrated MP4 plays and seeks on a byte-range server and pauses on leaving its panel. Background autoplay, manual pause/play, offscreen pause and reduced-motion behavior passed. No runtime errors, missing assets or external media requests were observed. All five articles and native video controls remain accessible without JavaScript.
