@@ -1,0 +1,52 @@
+[
+  {
+    "file": "openstax-skin-layers.jpg",
+    "title": "Layers of Skin",
+    "creator": "OpenStax",
+    "book": "Anatomy and Physiology 2e",
+    "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-anatomy-physiology/5ae32b3f4bc24ed003e91dc38bf47dba80751044/media/501_Structure_of_the_skin.jpg",
+    "source_commit": "5ae32b3f4bc24ed003e91dc38bf47dba80751044",
+    "license": "CC BY-NC-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "modifications": "None; original JPG retained. Displayed at responsive sizes.",
+    "sha256": "daabe7012c17ae8c9a053934275102f4c676a08c047621fed058202fb4eb546d"
+  },
+  {
+    "file": "openstax-neuron.jpg",
+    "title": "Parts of a Neuron",
+    "creator": "OpenStax",
+    "book": "Anatomy and Physiology 2e",
+    "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-2-nervous-tissue",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-anatomy-physiology/5ae32b3f4bc24ed003e91dc38bf47dba80751044/media/1206_The_Neuron.jpg",
+    "source_commit": "5ae32b3f4bc24ed003e91dc38bf47dba80751044",
+    "license": "CC BY-NC-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "modifications": "None; original JPG retained. Displayed at responsive sizes.",
+    "sha256": "626691d5718e4928b4b85001dcbd2c5d47ecb5cbec57cb70b12e7f74874567d1"
+  },
+  {
+    "file": "openstax-synapse.jpg",
+    "title": "The Synapse",
+    "creator": "OpenStax",
+    "book": "Anatomy and Physiology 2e",
+    "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-5-communication-between-neurons",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-anatomy-physiology/5ae32b3f4bc24ed003e91dc38bf47dba80751044/media/1225_Chemical_Synapse.jpg",
+    "source_commit": "5ae32b3f4bc24ed003e91dc38bf47dba80751044",
+    "license": "CC BY-NC-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "modifications": "None; original JPG retained. Displayed at responsive sizes.",
+    "sha256": "3996594def76234d0a91c1371bb74007a94b49032ae38f6a5b28b11f7d4a2c57"
+  },
+  {
+    "file": "user-tetanus-micrograph.png",
+    "title": "Clostridium tetani micrograph supplied by the project group",
+    "creator": null,
+    "provided_by": "Project group, uploaded ZIP attachment",
+    "source_page": "https://en.namu.wiki/w/%ED%8C%8C%EC%83%81%ED%92%8D%EA%B7%A0",
+    "license": null,
+    "rights_note": "User-supplied image. Original photographer and licence were not provided or independently verified. Not covered by the OpenStax licence.",
+    "modifications": "None. Original PNG bytes preserved; non-destructive CSS observation markers are displayed over it.",
+    "sha256": "12342bb9d08f3438336362cd0a36806cde3804616354ad2a857302904cc75a80"
+  }
+]

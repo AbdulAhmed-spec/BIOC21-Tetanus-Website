@@ -253,3 +253,25 @@ footer p{margin:0}
 .concept-bridge .next-topic{margin-top:19px;padding-top:19px;border-color:#bdcbb6}
 @media(max-width:1100px){.specimen-display{grid-template-columns:1fr}.specimen-display>svg{max-height:250px}.route-activity .pathway{gap:20px 14px}.activity{padding:22px}.activity-heading h3{font-size:19px}}
 @media(max-width:760px){.discovery-passport{margin-top:18px}.discovery-passport ul{display:grid;grid-template-columns:1fr 1fr;gap:0 15px}.activity{padding:19px;margin:23px 0}.activity-heading{gap:12px}.activity-tag{font-size:7px;letter-spacing:1px}.activity-heading h3{font-size:18px}.activity-badge{font-size:6px;padding:4px 6px}.activity-instruction{font-size:13px}.activity-controls button{padding:9px 12px}.specimen-note h3{font-size:22px}.body-activity .symptom-visual{grid-template-columns:1fr}.body-activity .body-map{width:200px}.body-activity .body-map>svg{max-height:none}.body-hotspot{width:30px;height:30px}.concept-bridge{padding:19px}.concept-bridge>p{font-size:14px}.pathway-stop>h3{font-size:13px}.pathway-stop>p{font-size:11px}.activity-action{font-size:11px}}
+/* Sourced textbook artwork: preserve the full image and all original labels. */
+.source-diagram{margin-bottom:24px}
+.sourced-figure{background:white;border:1px solid #d0d8cd;border-radius:10px;padding:18px;margin:18px}
+.sourced-figure>img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;object-position:center;background:white}
+.sourced-figure figcaption{font-size:11px;line-height:1.9;color:#4d5e6a;text-align:left;margin-top:16px}
+.sourced-figure figcaption a{color:#315f7b}
+.route-detail{margin:22px 0 0}
+.pathway li{display:flex;flex-direction:column}
+.pathway-stop{height:auto;flex:1}
+.pathway-stop img{aspect-ratio:1/1;object-fit:contain;object-position:center;background:white;padding:5px}
+@media(max-width:760px){.sourced-figure{padding:12px;margin:12px}.route-detail{margin:20px 0 0}.sourced-figure figcaption{font-size:10px}}
+/* The supplied photograph is preserved; observation markers are interface overlays. */
+.specimen-micrograph{min-width:0}
+#specimen-model.micrograph-frame{position:relative;overflow:hidden;background:white;line-height:0}
+.micrograph-frame>img{display:block;width:100%;height:auto;object-fit:contain}
+.micrograph-marker{position:absolute;pointer-events:none;box-shadow:0 0 0 2px #fff9;border:3px solid #326143}
+.marker-bacterium{left:12%;top:23%;width:14%;height:8%;border-radius:50%;transform:translate(-50%,-50%) rotate(12deg)}
+.marker-spore{left:5.7%;top:20.3%;width:7%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);border-color:#294f87}
+.micrograph-toxin-note{position:absolute;left:8px;right:8px;bottom:8px;background:#10263be8;color:#fffdf1;font-size:10px;font-weight:600;line-height:1.6;padding:8px 10px;border-radius:6px;text-align:center}
+.specimen-micrograph figcaption{font-size:10px;line-height:1.8;text-align:left;margin-top:12px}
+.specimen-micrograph figcaption a{color:#315f7b}
+.micrograph-cue{line-height:1.8}

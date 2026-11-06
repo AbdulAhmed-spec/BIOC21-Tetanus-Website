@@ -20,9 +20,9 @@
   }
 
   const specimens = {
-    spore:{label:'THE SPORE',title:'A tough resting form',text:'This is a resting form of the bacterium—not a different organism. Spores can survive in the environment and enter through broken skin.',image:'Simplified illustration of a round resting spore at the end of a bacterial rod'},
-    bacterium:{label:'THE BACTERIUM',title:'A tiny living cell',text:'Clostridium tetani can grow in low-oxygen areas of a wound and make toxin. The bacteria do not need to spread throughout the body for the toxin to cause effects.',image:'Simplified illustration of a living rod-shaped bacterium'},
-    toxin:{label:'THE TOXIN',title:'The travelling poison',text:'Tetanus toxin is a molecule made by the bacterium, not a living cell. It can travel along nerves toward the spinal cord and brainstem and disrupt inhibitory messages.',image:'Simplified illustration of toxin molecules, shown at a different scale from the bacterium'}
+    spore:{label:'THE SPORE',title:'A tough resting form',text:'This is a resting form of the bacterium—not a different organism. Spores can survive in the environment and enter through broken skin.',cue:'Look for the round blue terminal spores at the ends of the pink rods. The circle highlights one example.'},
+    bacterium:{label:'THE BACTERIUM',title:'A tiny living cell',text:'Clostridium tetani can grow in low-oxygen areas of a wound and make toxin. The bacteria do not need to spread throughout the body for the toxin to cause effects.',cue:'Look for pink, rod-shaped bacterial cells. The outline highlights an example; the photograph is unchanged.'},
+    toxin:{label:'THE TOXIN',title:'The travelling poison',text:'Tetanus toxin is a molecule made by the bacterium, not a living cell. It can travel along nerves toward the spinal cord and brainstem and disrupt inhibitory messages.',cue:'Toxin is a molecule and is not visible in this micrograph. The photo shows bacterial cells and spores, not toxin molecules.'}
   };
   document.querySelector('.specimen-controls').hidden = false;
   document.querySelectorAll('[data-specimen]').forEach(button => button.addEventListener('click', () => {
@@ -31,7 +31,7 @@
     visited.microbe.add(id);
     document.querySelectorAll('[data-specimen]').forEach(control => control.setAttribute('aria-pressed',String(control===button)));
     document.querySelectorAll('[data-specimen-art]').forEach(art => { art.toggleAttribute('hidden',art.dataset.specimenArt!==id); });
-    document.querySelector('#specimen-image-title').textContent = specimen.image;
+    document.querySelector('#micrograph-cue').textContent = specimen.cue;
     const note = document.querySelector('#specimen-note');
     note.querySelector('.mini-label').textContent = specimen.label;
     note.querySelector('h3').textContent = specimen.title;
@@ -46,6 +46,13 @@
     {label:'STOP 03 / ALONG NERVES',title:'Follow the toxin—not the bacterium',text:'Toxin is taken into motor nerve endings and transported toward the spinal cord and brainstem. A hand injury and a tight jaw can be connected through the nervous system.'},
     {label:'STOP 04 / NERVE CONTROL',title:'The normal brake is disrupted',text:'The toxin prevents release of inhibitory chemical messengers. Without normal braking, motor output can become excessive. Muscles may stay tight or spasm.'}
   ];
+  // These images are reproduced from documented human-created scientific sources.
+  const routeImages = [
+    {file:'assets/images/sourced/openstax-skin-layers.jpg',alt:'OpenStax diagram of intact skin, with labelled epidermis, dermis, underlying tissue, glands and nerves',caption:'Layers of Skin — OpenStax, Anatomy and Physiology 2e. This is intact skin; a wound creates a break in its barrier.',source:'https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin',license:'https://creativecommons.org/licenses/by-nc-sa/4.0/'},
+    {file:'assets/images/wound-poster.jpg',alt:'Still of damaged skin from Drew Berry’s Skin Wound Inflammation animation',caption:'Wound animation still — Drew Berry / WEHI.TV, 2014, from the supplied video. This shows general inflammation, not tetanus bacteria or toxin.',source:'https://www.youtube.com/watch?v=8NWHKJgNfdI',license:null},
+    {file:'assets/images/sourced/openstax-neuron.jpg',alt:'OpenStax drawing of a neuron showing cell body, dendrites, axon, myelin and synapses',caption:'Parts of a Neuron — OpenStax, Anatomy and Physiology 2e. A general neuron diagram; the drawing does not depict tetanus toxin transport.',source:'https://openstax.org/books/anatomy-and-physiology-2e/pages/12-2-nervous-tissue',license:'https://creativecommons.org/licenses/by-nc-sa/4.0/'},
+    {file:'assets/images/sourced/openstax-synapse.jpg',alt:'OpenStax diagram of a normal chemical synapse showing vesicles releasing neurotransmitters',caption:'The Synapse — OpenStax, Anatomy and Physiology 2e. This drawing shows normal messenger release. Tetanus toxin blocks release in inhibitory neurons.',source:'https://openstax.org/books/anatomy-and-physiology-2e/pages/12-5-communication-between-neurons',license:'https://creativecommons.org/licenses/by-nc-sa/4.0/'}
+  ];
   document.querySelectorAll('[data-route-stop]').forEach(button => {
     button.disabled = false;
     button.addEventListener('click', () => {
@@ -57,6 +64,19 @@
       note.querySelector('.mini-label').textContent = stop.label;
       note.querySelector('h3').textContent = stop.title;
       note.querySelector('p').textContent = stop.text;
+      const artwork = routeImages[index];
+      document.querySelector('#route-detail').hidden = false;
+      const image = document.querySelector('#route-detail-image');
+      image.src = artwork.file;
+      image.alt = artwork.alt;
+      document.querySelector('#route-detail-caption').textContent = artwork.caption;
+      document.querySelector('#route-detail-source').href = artwork.source;
+      document.querySelector('#route-detail-full').href = artwork.file;
+      document.querySelector('#route-detail-license-wrapper').hidden = !artwork.license;
+      const license = document.querySelector('#route-detail-license');
+      if (artwork.license) license.href = artwork.license;
+      else license.removeAttribute('href');
+
       document.querySelector('#route-progress').textContent = `${visited.route.size} of 4 stops inspected${visited.route.size===4?' — from a wound to a change in nerve control.':''}`;
       if (visited.route.size===4) completeActivity('route');
     });
