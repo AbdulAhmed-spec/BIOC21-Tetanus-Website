@@ -4,7 +4,7 @@ A static science website for grades 7–8. No build step or app dependencies. Ma
 
 ## Style and information design
 
-The former sequence of long, slide-like sections is now a six-topic explorer:
+The former sequence of long, slide-like sections is now a six-topic explorer, with an optional three-post science break:
 
 1. What is tetanus? — the bacterium, toxin, spores, and lockjaw.
 2. What’s under the skin? — the wound animation and a personal observation to compare with a science note.
@@ -23,11 +23,13 @@ The site remains full width. Midnight backgrounds, pale reading panels, sky blue
 - `styles.css`: palette in `:root`, full-width layout, topic navigation, reading panels and media styles.
 - `script.js`: topic selection, keyboard navigation, hash/deep-link handling, and video visibility logic.
 - `activities.js`: the five information-panel activities and discovery progress, held only in page memory.
+- `reels.js`: the three-post science break, answer feedback, scrolling and keyboard navigation.
+- `assets/memes`: the unchanged user-supplied meme images and provenance notes.
 - `games/locked-jaw/`: the playable detective game, its styles, script, offline exporter, and documentation.
 - `assets/images`: illustrations and posters. Drawings are labeled as illustrations rather than micrographs.
 - `assets/videos`: the two previously supplied MP4 files plus the web-compatible MP4 prepared from the new vaccination MOV.
 
-Topic navigation is progressively enhanced: anchors become ARIA tabs with arrow, Home/End, Enter and Space support. One panel is shown at a time when JavaScript is available. All six articles are visible with ordinary document links when JavaScript is disabled. Details can be opened with a keyboard. Existing topic hashes, including `#tissues` and `#nervous-system`, reveal the correct article; direct links to details open their content.
+Topic navigation is progressively enhanced: anchors become ARIA tabs with arrow, Home/End, Enter and Space support. One panel is shown at a time when JavaScript is available. All six science articles and the science break are visible with ordinary document links when JavaScript is disabled. Details can be opened with a keyboard. Existing topic hashes, including `#tissues` and `#nervous-system`, reveal the correct article; direct links to details open their content.
 
 ## Preview
 
@@ -45,7 +47,7 @@ The wound video shows general inflammation, not a tetanus-specific process. Cred
 
 The style revision preserves the major scientific explanations while shortening the initial reading. General information links to CDC and WHO resources. Unsupported fatality percentages remain omitted. Have the group review final medical wording and sources before presenting.
 
-The Locked Jaw game includes clues, a nerve-signal comparison and a cause-and-effect evidence puzzle. No other games, quizzes or newsletter service have been added. Exact Ontario curriculum expectation mapping remains separate work: the official Ontario curriculum site returned HTTP 403 in this execution environment, so no unverified expectation codes or alignment claims have been added.
+The Locked Jaw game includes clues, a nerve-signal comparison and a cause-and-effect evidence puzzle. The science-break feed adds three user-supplied scenario questions; no other full games or newsletter service have been added. Exact Ontario curriculum expectation mapping remains separate work: the official Ontario curriculum site returned HTTP 403 in this execution environment, so no unverified expectation codes or alignment claims have been added.
 
 ## Local validation
 
@@ -89,8 +91,28 @@ The three-stage “Practice / Remember / Refresh” activity adds the fifth disc
 
 The clip is included as a project-supplied conversation starter, without unverified quotations or invented spoken captions. Spoken lines have been requested for an accurate caption/transcript addition; none were available when this draft was completed. Source medical explanations were checked against OpenStax Microbiology’s Vaccines and Tetanus sections. The current Canadian government page could not be retrieved from this environment (HTTP 403); current dose schedules are therefore not reproduced. Official Ontario/Canadian information links are provided.
 
-The vaccination video has native controls, no autoplay, and preserves the entire portrait image. Both topic video players pause when their topic is left, and only one topic video is allowed to play at a time. Each has its own file-error message and direct file link. Without JavaScript, all six articles and both native players remain available.
+The vaccination video has native controls, no autoplay, and preserves the entire portrait image. Both topic video players pause when their topic is left, and only one topic video is allowed to play at a time. Each has its own file-error message and direct file link. Without JavaScript, all six science articles, the science break and both native players remain available.
 
 Chromium validation covered the new header link, deep link, keyboard topic selection, all three vaccine phases, idempotent discovery counting, completing all five discoveries, actual MP4 playback and seeking with sound enabled, pausing both topic videos on navigation, the recovery → vaccination → game flow, desktop/small-window layout, and no-JavaScript fallback. No runtime errors, missing resources or external media requests were observed. Review image: `/workspace/scratch/tetanus-vaccination-review/vaccination-section.png`.
 
 Make future changes locally and push only when the user explicitly requests it.
+
+## Reels-style science break
+
+A finite three-post feed, `#reels`, is linked from the header and topic sidebar. Each post pairs one unchanged supplied meme with the corresponding user-written scenario and four answer choices. All three correct answers are option 2. Wrong choices have distinct, explanatory feedback; students can revise their answers without a timer or navigation lock.
+
+The desktop layout places an uncropped meme in a portrait-style frame beside the question. The image is identified as a static meme, not a video. Native scrolling uses scroll snapping. Previous/Next controls, numbered post buttons and focused-feed Arrow Up/Down, Page Up/Down, Home/End keys offer alternatives. Radio groups retain their native keyboard interaction. The feed ends at post 3: no infinite scrolling, autoplay, real social account, engagement counts, third-party embeds or tracking.
+
+Three contextual links place the break into the concept flow:
+
+- Wound topic → `#reel-small-cut` → toxin pathway.
+- Toxin pathway → `#reel-built-different` → symptoms.
+- Vaccination topic → `#reel-vaccination` → Locked Jaw case.
+
+Direct links select the correct outer panel and post. Students may skip the break or revisit another post. Current selections and checked feedback survive topic changes in the same page; refreshing clears them. “Answered” counts reflect checked current selections, not a grade or persisted score. This counter is separate from the five activity discoveries. Without JavaScript, all three posts and expandable answer explanations remain readable without a nested scroll area.
+
+Asset notes are in `assets/memes/README.md`. The meme source bytes match the uploaded ZIP members. Original creators/licences were not supplied. The source files have not been altered; only CSS positioning and background blur are used.
+
+Local Chromium checks covered all supplied image loads, wrong and correct answers, repeated submissions, answer changes, native radio keyboard behavior, feed keyboard and button navigation, real scroll positioning, deep links, saved choices when returning, all three topic handoffs and game launch, desktop/small-window layout, and no-JavaScript reading fallback. No runtime errors, missing resources or external requests were observed. Review screenshots: `/workspace/scratch/tetanus-reels-review`.
+
+Make future changes locally and push only when the user explicitly requests publication.
