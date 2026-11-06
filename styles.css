@@ -275,3 +275,35 @@ footer p{margin:0}
 .specimen-micrograph figcaption{font-size:10px;line-height:1.8;text-align:left;margin-top:12px}
 .specimen-micrograph figcaption a{color:#315f7b}
 .micrograph-cue{line-height:1.8}
+/* Vaccination: a portrait conversation alongside the science, followed by immune memory. */
+.vaccination-feature{display:grid;grid-template-columns:minmax(220px,.85fr) minmax(0,1.15fr);gap:32px;align-items:center;margin:30px 0}
+.vaccination-video-card{width:100%;max-width:320px;margin:0 auto}
+.vaccination-video-frame{position:relative;width:100%;aspect-ratio:480/854;border:1px solid #c3cdc0;border-radius:12px;background:var(--ink-deep);overflow:hidden}
+.vaccination-video-frame video{display:block;width:100%;height:100%;object-fit:contain}
+.vaccination-video-card figcaption{font-size:11px;line-height:1.8;margin-top:12px;text-align:left;color:#526074}
+.vaccination-video-context>h3{font-size:27px;line-height:1.2;margin-bottom:18px}
+.vaccination-video-context>p{font-size:15px;line-height:1.8;color:#4c5e6b}
+.vaccine-key-fact{padding:23px;background:#e3ebd8;border-left:3px solid #6d955d;border-radius:0 10px 10px 0;margin:23px 0}
+.vaccine-key-fact h4{font-size:19px;line-height:1.4;margin:0 0 12px;letter-spacing:-.4px}
+.vaccine-key-fact p{font-size:14px;line-height:1.8;color:#475c48;margin:0}
+.vaccine-video-question{font-size:13px!important;line-height:1.9!important}
+.immune-memory-path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:24px 0}
+.immune-memory-path li{background:#f8f7ef;border:1px solid #c3d0bb;border-radius:10px;padding:20px 16px;transition:background .2s,border-color .2s}
+.immune-memory-path li.current{background:#dfeccf;border-color:#6c925b}
+.immune-memory-path li>span{display:block;font-size:9px;font-weight:700;letter-spacing:1px;color:#5c7c4e;margin-bottom:17px}
+.immune-memory-path h4{font-size:15px;line-height:1.4;margin:0 0 11px;letter-spacing:-.2px}
+.immune-memory-path p{font-size:12px;line-height:1.8;margin:0;color:#4a5c53}
+.vaccine-stage-note{padding:22px;border-radius:10px;background:#e0e8d7}
+.vaccine-stage-note .mini-label{color:#536e45}
+.vaccine-stage-note h3{font-size:21px;margin-bottom:14px}
+.vaccine-stage-note p{font-size:14px;line-height:1.8;color:#465d62;margin:0}
+.vaccine-takeaways{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:28px 0}
+.vaccine-takeaways>div{padding:23px;border:1px solid #c6d0c1;border-radius:12px;background:#f4f4e9}
+.vaccine-takeaways h3{font-size:20px;line-height:1.3;margin-bottom:15px}
+.vaccine-takeaways p{font-size:14px;line-height:1.8;color:#4d5d69;margin:0}
+.vaccination-next-step{background:#e4ebef;padding:24px;border-left:3px solid #6f92a6;border-radius:0 12px 12px 0;margin-top:24px}
+.vaccination-next-step h3{font-size:22px;line-height:1.3;margin-bottom:15px}
+.vaccination-next-step p{font-size:14px;line-height:1.8;color:#496073}
+@media(max-height:900px){.topic-sidebar{position:static}}
+@media(max-width:1100px){.vaccination-feature{grid-template-columns:1fr}.vaccination-video-card{max-width:290px}.vaccination-video-context>h3{font-size:25px}.immune-memory-path{grid-template-columns:1fr}.immune-memory-path li{padding:18px}.immune-memory-path li>span{margin-bottom:10px}.vaccine-takeaways{grid-template-columns:1fr}}
+@media(max-width:760px){.vaccination-feature{gap:24px}.vaccination-video-card{max-width:270px}.vaccination-video-context>h3{font-size:23px}.vaccine-key-fact{padding:19px}.vaccine-controls button{padding:9px 10px;font-size:11px}.vaccine-stage-note{padding:19px}.vaccination-next-step{padding:20px}}

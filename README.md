@@ -4,13 +4,14 @@ A static science website for grades 7–8. No build step or app dependencies. Ma
 
 ## Style and information design
 
-The former sequence of long, slide-like sections is now a five-topic explorer:
+The former sequence of long, slide-like sections is now a six-topic explorer:
 
 1. What is tetanus? — the bacterium, toxin, spores, and lockjaw.
 2. What’s under the skin? — the wound animation and a personal observation to compare with a science note.
 3. How does it work? — an inspectable wound-to-nerve pathway and comparison of usual and disrupted signals.
 4. What does it do? — a body hotspot map connecting muscle symptoms to nerve control.
-5. Can people recover? — a short care/recovery/prevention sequence leading into the case game.
+5. Can people recover? — a short care/recovery sequence.
+6. Why vaccinate? — a group video, an immune-memory exploration, prevention takeaways, and a link into the case game.
 
 Each topic starts with short, plain-language text and a visual. Scientific terms, the four tetanus forms, tissues, other symptoms, complications, and prognosis remain available in native “Go deeper” disclosures. The topic explorer is complemented by **The Case of the Locked Jaw**, a playable investigation linked from the main navigation and the game section.
 
@@ -21,12 +22,12 @@ The site remains full width. Midnight backgrounds, pale reading panels, sky blue
 - `index.html`: content, illustrations, source links, and native video markup.
 - `styles.css`: palette in `:root`, full-width layout, topic navigation, reading panels and media styles.
 - `script.js`: topic selection, keyboard navigation, hash/deep-link handling, and video visibility logic.
-- `activities.js`: the four information-panel activities and discovery progress, held only in page memory.
+- `activities.js`: the five information-panel activities and discovery progress, held only in page memory.
 - `games/locked-jaw/`: the playable detective game, its styles, script, offline exporter, and documentation.
 - `assets/images`: illustrations and posters. Drawings are labeled as illustrations rather than micrographs.
-- `assets/videos`: the two previously supplied MP4 files, unchanged by this redesign.
+- `assets/videos`: the two previously supplied MP4 files plus the web-compatible MP4 prepared from the new vaccination MOV.
 
-Topic navigation is progressively enhanced: anchors become ARIA tabs with arrow, Home/End, Enter and Space support. One panel is shown at a time when JavaScript is available. All five articles are visible with ordinary document links when JavaScript is disabled. Details can be opened with a keyboard. Existing topic hashes, including `#tissues` and `#nervous-system`, reveal the correct article; direct links to details open their content.
+Topic navigation is progressively enhanced: anchors become ARIA tabs with arrow, Home/End, Enter and Space support. One panel is shown at a time when JavaScript is available. All six articles are visible with ordinary document links when JavaScript is disabled. Details can be opened with a keyboard. Existing topic hashes, including `#tissues` and `#nervous-system`, reveal the correct article; direct links to details open their content.
 
 ## Preview
 
@@ -48,7 +49,7 @@ The Locked Jaw game includes clues, a nerve-signal comparison and a cause-and-ef
 
 ## Local validation
 
-Chromium checks passed at 1366, 1920 and 2560 pixels, with a smaller-window regression check. All five topics select correctly, only one panel is visible, all illustration files load, disclosures open, keyboard tab selection works, and deep links reveal their destinations. The actual narrated MP4 plays and seeks on a byte-range server and pauses on leaving its panel. Background autoplay, manual pause/play, offscreen pause and reduced-motion behavior passed. No runtime errors, missing assets or external media requests were observed. All five articles and native video controls remain accessible without JavaScript.
+Chromium checks passed at 1366, 1920 and 2560 pixels, with a smaller-window regression check. All five topics select correctly, only one panel is visible, all illustration files load, disclosures open, keyboard tab selection works, and deep links reveal their destinations. The actual narrated MP4 plays and seeks on a byte-range server and pauses on leaving its panel. Background autoplay, manual pause/play, offscreen pause and reduced-motion behavior passed. No runtime errors, missing assets or external media requests were observed. All six articles and native video controls remain accessible without JavaScript.
 
 ## Game integration
 
@@ -56,16 +57,17 @@ The homepage’s “Play the game” navigation item and “Play the investigati
 
 ## Information-panel discoveries and flow
 
-The information panels include four small, ungated activities. Make future changes locally and push only when the user explicitly requests it.
+The information panels include five small, ungated activities. Make future changes locally and push only when the user explicitly requests it.
 
-- Compare a spore, living bacterium, and toxin using a changing SVG model and role descriptions. Inspect all three to collect the specimen notes.
+- Compare a spore, living bacterium, and toxin using the supplied micrograph, observation markers and role descriptions. Inspect all three to collect the specimen notes.
 - Write a video observation, then reveal a scientific comparison. Free text is never automatically graded, inserted as HTML, stored, or sent anywhere.
 - Select each stop of the toxin pathway to connect wound entry, bacterial growth/toxin production, nerve transport, and blocked inhibitory messages.
 - Explore three muscle areas on a keyboard-accessible body hotspot map, with an explanation linking each effect to nerve control.
+- Explore toxoid practice, antibody/memory development, and booster reminders in the vaccination topic.
 
-A discovery passport records four explorations. It is not a mastery score, does not award duplicate progress, and never blocks navigation. Progress and the observation note survive topic switching but clear on reload. All activities use native buttons or form controls with accessible labels, text feedback, and reduced-motion support. Without JavaScript, reading content, symptom descriptions, disclosures, native video controls, and contextual explanations remain available.
+A discovery passport records five explorations. It is not a mastery score, does not award duplicate progress, and never blocks navigation. Progress and the observation note survive topic switching but clear on reload. All activities use native buttons or form controls with accessible labels, text feedback, and reduced-motion support. Without JavaScript, reading content, symptom descriptions, disclosures, native video controls, and contextual explanations remain available.
 
-Topics now follow the story: microbe → wound → toxin journey → muscle symptoms → care and prevention → case game. Each topic ends with a short connecting paragraph and a descriptive link into the next concept. Existing topic hashes are preserved.
+Topics now follow the story: microbe → wound → toxin journey → muscle symptoms → care and recovery → vaccination and prevention → case game. Each topic ends with a short connecting paragraph and a descriptive link into the next concept. Existing topic hashes are preserved.
 
 Local Chromium checks exercised SVG state changes, keyboard selection, unique discovery counting, whitespace handling, reflection without grading or HTML injection, pathway and body exploration, preserved state across tabs, the complete linking sequence through to the game, updated keyboard topic order, desktop/small-window layout, and no-JavaScript reading fallback. No runtime errors, missing resources or external requests were observed. Review screenshots are in `/workspace/scratch/tetanus-discoveries-review`.
 
@@ -76,3 +78,19 @@ The image update replaces the generated pathway images in topics 2–3 with orig
 The exact user-selected micrograph for topic 1 has now been received as a ZIP and extracted unchanged as `assets/images/sourced/user-tetanus-micrograph.png`. It replaces the generated specimen pictures while preserving the three specimen explanations and discovery progress. Spore/bacterium markers are non-destructive CSS overlays; the toxin view clearly states that toxin is not visible in the photo. The user provided a source page, but original photographer/licence details were not independently verified and are not asserted to match the OpenStax licence. Existing drawings outside these three topics remain unchanged.
 
 Local checks confirmed all replacement images load, generated pathway SVGs are no longer referenced, large-image and licence controls match each stop, the discovery activity still works, no horizontal overflow appears at desktop/small-window sizes, and no runtime errors or external media requests occur. Review screenshots are in `/workspace/scratch/tetanus-sourced-images-review`.
+
+## Vaccination topic
+
+A sixth topic, `#vaccination`, is linked from the main navigation and topic list. Recovery now transitions into vaccination; vaccination links into the Locked Jaw case. The section explains inactivated toxin (toxoid), antibodies and immune memory, booster reminders, and the need for vaccination after recovery. It gives a practical record-checking step with a trusted adult, clinician or public health unit. It does not prescribe an individual vaccination schedule or present vaccination as treatment for toxin already acting inside nerves.
+
+The three-stage “Practice / Remember / Refresh” activity adds the fifth discovery. The total is derived from the discovery list to keep future additions consistent. All stages remain available in any order, and repeated exploration does not add duplicate progress. Short desktop viewports use a non-sticky sidebar so the longer navigation remains reachable.
+
+`assets/videos/vaccination-conversation.mp4` is prepared from the supplied `copy_96CC9D27-E141-4A75-8D83-A764C94FCF16.mov`. It retains the complete 13.77-second portrait frame (480 × 854), sound and sequence. The original uploaded MOV remains unchanged. The web copy uses H.264/yuv420p in a fast-start MP4, with HLG/BT.2020 colour converted to standard Rec.709 for browser compatibility. Original AAC audio packets were copied and their hashes matched. The PNG poster comes from the converted clip at two seconds. No AI image generation or audio generation was used.
+
+The clip is included as a project-supplied conversation starter, without unverified quotations or invented spoken captions. Spoken lines have been requested for an accurate caption/transcript addition; none were available when this draft was completed. Source medical explanations were checked against OpenStax Microbiology’s Vaccines and Tetanus sections. The current Canadian government page could not be retrieved from this environment (HTTP 403); current dose schedules are therefore not reproduced. Official Ontario/Canadian information links are provided.
+
+The vaccination video has native controls, no autoplay, and preserves the entire portrait image. Both topic video players pause when their topic is left, and only one topic video is allowed to play at a time. Each has its own file-error message and direct file link. Without JavaScript, all six articles and both native players remain available.
+
+Chromium validation covered the new header link, deep link, keyboard topic selection, all three vaccine phases, idempotent discovery counting, completing all five discoveries, actual MP4 playback and seeking with sound enabled, pausing both topic videos on navigation, the recovery → vaccination → game flow, desktop/small-window layout, and no-JavaScript fallback. No runtime errors, missing resources or external media requests were observed. Review image: `/workspace/scratch/tetanus-vaccination-review/vaccination-section.png`.
+
+Make future changes locally and push only when the user explicitly requests it.

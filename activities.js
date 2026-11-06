@@ -2,7 +2,8 @@
 // These record exploration, not correctness or mastery. They never lock navigation.
 (() => {
   const completed = new Set();
-  const visited = {microbe:new Set(), route:new Set(), body:new Set()};
+  const totalActivities = document.querySelectorAll('[data-discovery]').length;
+  const visited = {microbe:new Set(), route:new Set(), body:new Set(), vaccination:new Set()};
   const passport = document.querySelector('#discovery-passport');
   passport.hidden = false;
   document.querySelector('.sidebar-note').hidden = true;
@@ -15,8 +16,8 @@
     const badge = document.querySelector(`[data-activity-badge="${id}"]`);
     badge.textContent = 'EXPLORED';
     badge.classList.add('explored');
-    const names = {microbe:'Specimen notes',observation:'Observation comparison',route:'Toxin pathway',body:'Muscle effects'};
-    document.querySelector('#discovery-status').textContent = `${names[id]} explored. ${completed.size} of 4 activities explored.${completed.size===4?' Ready to connect the ideas in the Locked Jaw case?':''}`;
+    const names = {microbe:'Specimen notes',observation:'Observation comparison',route:'Toxin pathway',body:'Muscle effects',vaccination:'Vaccination and immune memory'};
+    document.querySelector('#discovery-status').textContent = `${names[id]} explored. ${completed.size} of ${totalActivities} activities explored.${completed.size===totalActivities?' Ready to connect the ideas in the Locked Jaw case?':''}`;
   }
 
   const specimens = {
@@ -94,6 +95,26 @@
     document.querySelectorAll('[data-body-card]').forEach(card => { card.hidden=card.dataset.bodyCard!==id; });
     document.querySelector('#body-progress').textContent = `${bodyNames[id]} explored. ${visited.body.size} of 3 muscle areas inspected.${visited.body.size===3?' Different symptoms, one link: disrupted nerve control.':''}`;
     if (visited.body.size===3) completeActivity('body');
+  }));
+
+  const vaccineStages = {
+    practice:{label:'STAGE 01 / PRACTICE',title:'A safe introduction to the toxin.',text:'The vaccine’s inactivated toxin, called a toxoid, acts as a practice target. It prompts an immune response without the harmful action of active tetanus toxin.'},
+    memory:{label:'STAGE 02 / REMEMBER',title:'Antibodies and memory cells develop.',text:'Antibodies are protective proteins that recognize and bind to a target, such as the toxin. Vaccination also helps form immune memory cells. Protective antibodies can neutralize toxin before it binds to nerve tissue.'},
+    boosters:{label:'STAGE 03 / REFRESH',title:'Keep the response ready.',text:'Protection can decrease over time. Recommended booster doses stimulate the immune response again and help maintain protective antibody levels. The right schedule depends on age and vaccination history.'}
+  };
+  document.querySelector('.vaccine-controls').hidden = false;
+  document.querySelectorAll('[data-vaccine-phase]').forEach(button => button.addEventListener('click', () => {
+    const id = button.dataset.vaccinePhase;
+    visited.vaccination.add(id);
+    document.querySelectorAll('[data-vaccine-phase]').forEach(control => control.setAttribute('aria-pressed',String(control===button)));
+    document.querySelectorAll('[data-immune-step]').forEach(step => step.classList.toggle('current',step.dataset.immuneStep===id));
+    const stage = vaccineStages[id];
+    const note = document.querySelector('#vaccine-stage-note');
+    note.querySelector('.mini-label').textContent = stage.label;
+    note.querySelector('h3').textContent = stage.title;
+    note.querySelector('p').textContent = stage.text;
+    document.querySelector('#vaccine-phase-status').textContent = `${visited.vaccination.size} of 3 immune-memory stages explored.${visited.vaccination.size===3?' Vaccination prepares protection before exposure; boosters help keep it up to date.':''}`;
+    if (visited.vaccination.size===3) completeActivity('vaccination');
   }));
 
   const form = document.querySelector('#observation-form');

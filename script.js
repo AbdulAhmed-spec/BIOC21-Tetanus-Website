@@ -3,7 +3,7 @@
 const topicNavigation = document.querySelector('.topic-navigation');
 const topicLinks = [...document.querySelectorAll('[data-topic]')];
 const panels = [...document.querySelectorAll('.topic-panel')];
-const explainer = document.querySelector('#explainer-video');
+const topicVideos = [...document.querySelectorAll('.topic-panel video')];
 
 topicNavigation.setAttribute('role', 'tablist');
 topicNavigation.setAttribute('aria-orientation', 'vertical');
@@ -24,7 +24,9 @@ function selectTopic(id) {
     link.setAttribute('aria-selected', String(selected));
     link.tabIndex = selected ? 0 : -1;
   });
-  if (id !== 'watch') explainer.pause();
+  topicVideos.forEach(video => {
+    if (video.closest('.topic-panel').id !== id) video.pause();
+  });
 }
 
 function revealTarget(hash) {
@@ -128,6 +130,12 @@ new IntersectionObserver(([entry]) => {
   syncPlayback();
 }, { threshold: [0, 0.15] }).observe(hero);
 updateButton();
-function showVideoError() { document.querySelector('#explainer-error').hidden = false; }
-explainer.addEventListener('error', showVideoError);
-explainer.querySelector('source').addEventListener('error', showVideoError);
+// Only the selected topic's video should be heard. Each player has its own error message.
+topicVideos.forEach(video => {
+  video.addEventListener('play', () => {
+    topicVideos.forEach(other => { if (other !== video) other.pause(); });
+  });
+  const showError = () => { document.querySelector(video.dataset.errorTarget).hidden = false; };
+  video.addEventListener('error', showError);
+  video.querySelectorAll('source').forEach(source => source.addEventListener('error', showError));
+});
