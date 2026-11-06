@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101d32"><meta name="description" content="Investigate a fictional tetanus case: collect clues, compare nerve signals, and connect the evidence. A BIOC21 science game."><title>The Case of the Locked Jaw | BIOC21</title>
+  <link rel="icon" href="../../assets/images/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="game.css?v=locked-jaw-1"><script src="game.js?v=locked-jaw-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to investigation</a>
+  <header class="topbar"><a class="brand" href="../../index.html#game" aria-label="BIOC21 website"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 32 32"><path d="M16 2v28M2 16h28M6 6l20 20M6 26L26 6"/></svg><span>BIOC21<small>THE INVESTIGATION LAB</small></span></a><span class="case-label"><span></span> AN INTERACTIVE SCIENCE CASE</span><div class="header-actions"><a class="quiet-button back-link" href="../../index.html#game">Back to website</a><button class="quiet-button" id="help-button" type="button">Need a hint?</button></div></header>
+  <main class="game-shell">
+    <div class="case-heading"><div><p class="eyebrow">CASE FILE 001 / A MICROSCOPIC MYSTERY</p><h1>The case of the <span>locked jaw.</span></h1></div><div class="detective-tag"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><span>YOUR ROLE<small>Science detective</small></span></div></div>
+    <nav class="case-steps" aria-label="Investigation stages">
+      <button type="button" data-stage="briefing"><span class="step-dot">01</span><span>Open the case<small>The big question</small></span></button>
+      <button type="button" data-stage="clues" disabled><span class="step-dot">02</span><span>Find the clues<small>Inspect the evidence</small></span></button>
+      <button type="button" data-stage="lab" disabled><span class="step-dot">03</span><span>Test your theory<small>The signal lab</small></span></button>
+      <button type="button" data-stage="board" disabled><span class="step-dot">04</span><span>Connect the evidence<small>Close the case</small></span></button>
+    </nav>
+    <div class="workbench">
+      <section class="workspace" id="workspace" tabindex="-1" aria-label="Investigation workspace"></section>
+      <aside class="notebook" aria-labelledby="notebook-title"><div class="notebook-heading"><span class="mini-label">YOUR FIELD NOTES</span><h2 id="notebook-title">The evidence log</h2><span class="notebook-rule"></span></div><div id="notebook-content"></div><div class="notebook-footer"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 32 32"><path d="M16 2v28M2 16h28M6 6l20 20M6 26L26 6"/></svg><p>Follow the evidence.<br>Think smaller. See the bigger picture.</p></div></aside>
+    </div>
+    <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+    <details class="teacher-notes"><summary>About this game &amp; the science</summary><div><p>This is a fictional case and a simplified learning model, not a diagnostic tool. Alex is already receiving medical care. The activity asks students to explain a mechanism rather than make treatment decisions.</p><p>Tetanus bacteria can grow in a low-oxygen wound and release toxin. The toxin travels along nerves to the central nervous system, where it prevents release of inhibitory chemical messengers. The model simplifies this to a blocked “brake” signal and excessive motor output. Switching conditions compares models; it does not represent removing toxin from a patient.</p><p>Learn more: <a href="https://www.cdc.gov/tetanus/about/index.html" target="_blank" rel="noopener noreferrer">CDC: Tetanus (opens in a new tab)</a>. Progress stays in this page’s memory and resets on refresh. No scores or personal information are sent anywhere.</p><p>This game includes one case, three clues, one signal comparison and one evidence puzzle. No drawing recognition, treatment simulation, or timer.</p></div></details>
+    <footer><span>A BIOC21 learning experiment</span><span>Fictional case. Real science.</span><button class="quiet-button" id="restart-button" type="button">Start a new investigation</button></footer>
+  </main>
+  <noscript><p class="noscript">This game needs JavaScript. It uses only local files and does not connect to an AI service.</p></noscript>
+</body>
+</html>

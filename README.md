@@ -12,7 +12,7 @@ The former sequence of long, slide-like sections is now a five-topic explorer:
 4. Can people recover? — a short care/recovery/prevention sequence.
 5. What’s under the skin? — the existing narrated wound animation with an observation prompt.
 
-Each topic starts with short, plain-language text and a visual. Scientific terms, the four tetanus forms, tissues, other symptoms, complications, and prognosis remain available in native “Go deeper” disclosures. This is information navigation, not a learning game or quiz. The game remains an “in progress” banner.
+Each topic starts with short, plain-language text and a visual. Scientific terms, the four tetanus forms, tissues, other symptoms, complications, and prognosis remain available in native “Go deeper” disclosures. The topic explorer is complemented by **The Case of the Locked Jaw**, a playable investigation linked from the main navigation and the game section.
 
 The site remains full width. Midnight backgrounds, pale reading panels, sky blue, mint and lime accents, and consistent heading styles replace the presentation layout. Lilita One is used for headings and self-hosted DM Sans for readable body text. Font licenses are in `assets/fonts`.
 
@@ -21,6 +21,7 @@ The site remains full width. Midnight backgrounds, pale reading panels, sky blue
 - `index.html`: content, illustrations, source links, and native video markup.
 - `styles.css`: palette in `:root`, full-width layout, topic navigation, reading panels and media styles.
 - `script.js`: topic selection, keyboard navigation, hash/deep-link handling, and video visibility logic.
+- `games/locked-jaw/`: the playable detective game, its styles, script, offline exporter, and documentation.
 - `assets/images`: illustrations and posters. Drawings are labeled as illustrations rather than micrographs.
 - `assets/videos`: the two previously supplied MP4 files, unchanged by this redesign.
 
@@ -42,8 +43,12 @@ The wound video shows general inflammation, not a tetanus-specific process. Cred
 
 The style revision preserves the major scientific explanations while shortening the initial reading. General information links to CDC and WHO resources. Unsupported fatality percentages remain omitted. Have the group review final medical wording and sources before presenting.
 
-The game, quizzes, newsletter service and new learning activities have not been added. Exact Ontario curriculum expectation mapping remains separate work: the official Ontario curriculum site returned HTTP 403 in this execution environment, so no unverified expectation codes or alignment claims have been added.
+The Locked Jaw game includes clues, a nerve-signal comparison and a cause-and-effect evidence puzzle. No other games, quizzes or newsletter service have been added. Exact Ontario curriculum expectation mapping remains separate work: the official Ontario curriculum site returned HTTP 403 in this execution environment, so no unverified expectation codes or alignment claims have been added.
 
 ## Local validation
 
 Chromium checks passed at 1366, 1920 and 2560 pixels, with a smaller-window regression check. All five topics select correctly, only one panel is visible, all illustration files load, disclosures open, keyboard tab selection works, and deep links reveal their destinations. The actual narrated MP4 plays and seeks on a byte-range server and pauses on leaving its panel. Background autoplay, manual pause/play, offscreen pause and reduced-motion behavior passed. No runtime errors, missing assets or external media requests were observed. All five articles and native video controls remain accessible without JavaScript.
+
+## Game integration
+
+The homepage’s “Play the game” navigation item and “Play the investigation” button open `games/locked-jaw/index.html` in the same tab. The game provides a “Back to website” link to `index.html#game`. Both pages use relative asset paths compatible with GitHub Pages project subdirectories. Progress remains in the game page’s memory and resets when it is reloaded. Make future changes locally and push only when the user explicitly requests it.
