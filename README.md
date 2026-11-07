@@ -116,3 +116,17 @@ Asset notes are in `assets/memes/README.md`. The meme source bytes match the upl
 Local Chromium checks covered all supplied image loads, wrong and correct answers, repeated submissions, answer changes, native radio keyboard behavior, feed keyboard and button navigation, real scroll positioning, deep links, saved choices when returning, all three topic handoffs and game launch, desktop/small-window layout, and no-JavaScript reading fallback. No runtime errors, missing resources or external requests were observed. Review screenshots: `/workspace/scratch/tetanus-reels-review`.
 
 Make future changes locally and push only when the user explicitly requests publication.
+
+## Doctor–patient conversation
+
+The seventh science topic, `#doctor-patient`, connects symptoms to a doctor–patient conversation before care and recovery. The sidebar, topic numbers, deep links and connecting paragraphs include it. A short listening guide asks students to notice entry through a wound and the distribution of symptoms. The existing five-discovery passport is unchanged.
+
+The four-choice question asks which type of tetanus the patient has. The group confirmed **generalized tetanus** as correct, followed by localized, cephalic and neonatal as the other choices. `doctor-case.js` provides choice-specific explanations, retries, keyboard-operable native radio buttons and live feedback. Selections survive topic changes and clear on refresh; they are not sent anywhere. The explanation connects generalized tetanus to nerve control and muscle effects without inventing patient dialogue or symptoms. A comparison disclosure and a no-JavaScript answer explanation remain readable.
+
+The supplied replacement, `Sequence 01.mp4`, is saved unchanged as `assets/videos/doctor-patient-interaction.mp4` (24,373,435 bytes; source and repository SHA-256 hashes match). It contains 56.576 seconds of 1920 × 1080 H.264/yuv420p video and stereo AAC audio with its metadata already positioned for fast-start playback. No transcoding, cutting or audio changes were needed. The poster is a still at 12 seconds from the same clip. The original larger upload could not be transferred, so the supplied smaller version is the one used. No invented dialogue, spoken captions or unverified patient quotations have been added.
+
+The native controlled player has no autoplay, preserves the full frame, includes a direct-file fallback and pauses when another topic is selected or another topic video begins. It remains available without JavaScript. The multiple-choice question follows the clip and can be revisited without replaying or waiting through the video.
+
+Local Chromium checks passed for direct topic links, symptoms → conversation → recovery flow, all four answers, distinct feedback, retries, native radio keyboard controls, retained choices across topic switches and reset on refresh. Real video playback with sound enabled, metadata, seeking and pausing on topic changes or competing playback passed. The section fits 1920-, 1366- and 390-pixel viewports. The no-JavaScript reading/answer fallback was checked. No runtime errors or missing resources were observed. Review screenshot: `/workspace/scratch/tetanus-doctor-case-review/doctor-case.png`.
+
+These changes are for local review. Push only when the user explicitly requests publication.

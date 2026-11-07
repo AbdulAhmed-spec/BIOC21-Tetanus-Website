@@ -378,3 +378,26 @@ footer p{margin:0}
 
 .reel-choice.is-correct:has(input:checked){border-color:var(--lime);background:#294936}
 .reel-choice.is-incorrect:has(input:checked){border-color:var(--coral);background:#4a342e}
+
+/* Doctor–patient case: listen, connect the symptoms, then check a choice. */
+.doctor-listening-guide{padding:22px 24px;border:1px solid #bed0df;border-radius:12px;background:#e6edf1;margin-bottom:24px}
+.doctor-listening-guide .mini-label{color:#375e7b}
+.doctor-listening-guide ol{margin:14px 0 0;padding-left:21px;color:#40566a;font-size:14px;line-height:1.8}
+.doctor-listening-guide li+li{margin-top:9px}
+.doctor-case-media{margin:0 0 28px}
+.doctor-case-media figcaption{font-size:12px;line-height:1.8;color:#526074;margin-top:13px}
+#doctor-case-form fieldset{border:0;margin:0 0 20px;padding:0;min-width:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.doctor-case-choice{position:relative;display:flex;align-items:center;gap:12px;min-height:65px;padding:16px;border:1px solid #bacaba;border-radius:10px;background:var(--cream);color:#2d4557;font-size:15px;line-height:1.6;cursor:pointer}
+.doctor-case-choice input{position:absolute;width:1px;height:1px;margin:0;clip-path:inset(50%);overflow:hidden}
+.doctor-choice-letter{display:grid;place-items:center;width:28px;height:28px;flex-shrink:0;border:1px solid #9dafae;border-radius:50%;font-size:12px;font-weight:700}
+.doctor-case-choice:has(input:checked){border-color:#426e8c;background:#dce8f1}
+.doctor-case-choice:has(input:focus-visible){outline:3px solid #426e8c;outline-offset:3px}
+.doctor-case-choice.is-correct:has(input:checked){border-color:#557c46;background:#dcebcf}
+.doctor-case-choice.is-incorrect:has(input:checked){border-color:#a1644c;background:#f3e0d4}
+#doctor-case-form .activity-action:disabled{opacity:.55;cursor:default}
+.doctor-case-feedback>div{border-left:3px solid #a1644c;border-radius:0 8px 8px 0;background:#f3e5da;padding:20px;margin-top:20px}
+.doctor-case-feedback>div.correct{border-color:#557c46;background:#dcebcf}
+.doctor-case-feedback h4{font-size:16px;line-height:1.5;margin:0 0 10px}
+.doctor-case-feedback p{font-size:14px;line-height:1.8;margin:0;color:#405363}
+@media(max-width:1100px){#doctor-case-form fieldset{grid-template-columns:1fr}.doctor-case-activity .activity-heading{flex-wrap:wrap}}
+@media(max-width:760px){.doctor-listening-guide{padding:19px}.doctor-listening-guide ol{font-size:13px}.doctor-case-choice{padding:13px;font-size:14px}.doctor-case-feedback>div{padding:16px}.doctor-case-feedback p{font-size:13px}}
