@@ -47,7 +47,9 @@ if (initialTarget) requestAnimationFrame(() => initialTarget.scrollIntoView());
 function navigateTopic(link) {
   const id = link.dataset.topic;
   selectTopic(id);
-  history.replaceState(null, '', `#${id}`);
+  if (window.location.hash !== `#${id}`) history.pushState(null, '', `#${id}`);
+  // Start at the heading even when a student chooses a topic from further down the page.
+  document.getElementById(id).scrollIntoView({ block: 'start', behavior: 'auto' });
 }
 
 topicNavigation.addEventListener('click', event => {

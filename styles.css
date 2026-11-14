@@ -401,3 +401,14 @@ footer p{margin:0}
 .doctor-case-feedback p{font-size:14px;line-height:1.8;margin:0;color:#405363}
 @media(max-width:1100px){#doctor-case-form fieldset{grid-template-columns:1fr}.doctor-case-activity .activity-heading{flex-wrap:wrap}}
 @media(max-width:760px){.doctor-listening-guide{padding:19px}.doctor-listening-guide ol{font-size:13px}.doctor-case-choice{padding:13px;font-size:14px}.doctor-case-feedback>div{padding:16px}.doctor-case-feedback p{font-size:13px}}
+
+/* Clear Back/Next links inside the existing topic bridge. */
+.topic-flow{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #bdcbb6;margin-top:19px;padding-top:12px}
+.topic-flow .next-topic{border:0;margin:0 0 0 auto;padding:10px 0;gap:12px;min-height:44px}
+.topic-flow .next-topic>span:first-child{margin-right:0}
+.previous-topic{display:inline-flex;align-items:center;min-height:44px;color:#264d67;font-size:14px;font-weight:650;text-decoration:none}
+.previous-topic:hover{color:#3a672b}
+.optional-break{font-size:13px!important;margin-top:14px!important}
+.optional-break a{font-weight:650;color:#264d67}
+.discovery-passport .passport-help{font-size:11px;line-height:1.7;color:var(--muted);margin:10px 0 14px}
+@media(max-height:1200px){.topic-sidebar{position:static}}

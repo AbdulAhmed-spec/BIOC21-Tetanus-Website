@@ -17,7 +17,7 @@
     badge.textContent = 'EXPLORED';
     badge.classList.add('explored');
     const names = {microbe:'Specimen notes',observation:'Observation comparison',route:'Toxin pathway',body:'Muscle effects',vaccination:'Vaccination and immune memory'};
-    document.querySelector('#discovery-status').textContent = `${names[id]} explored. ${completed.size} of ${totalActivities} activities explored.${completed.size===totalActivities?' Ready to connect the ideas in the Locked Jaw case?':''}`;
+    document.querySelector('#discovery-status').textContent = `${names[id]} explored. ${completed.size} of ${totalActivities} optional activities explored. You can continue to the next topic at any time.`;
   }
 
   const specimens = {

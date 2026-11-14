@@ -4,14 +4,15 @@ A static science website for grades 7–8. No build step or app dependencies. Ma
 
 ## Style and information design
 
-The former sequence of long, slide-like sections is now a six-topic explorer, with an optional three-post science break:
+The former sequence of long, slide-like sections is now a seven-topic explorer, with an optional three-post science break:
 
 1. What is tetanus? — the bacterium, toxin, spores, and lockjaw.
 2. What’s under the skin? — the wound animation and a personal observation to compare with a science note.
 3. How does it work? — an inspectable wound-to-nerve pathway and comparison of usual and disrupted signals.
 4. What does it do? — a body hotspot map connecting muscle symptoms to nerve control.
-5. Can people recover? — a short care/recovery sequence.
-6. Why vaccinate? — a group video, an immune-memory exploration, prevention takeaways, and a link into the case game.
+5. Watch the patient story — a doctor–patient video and a question about the form of tetanus.
+6. How do people recover? — a short care/recovery sequence.
+7. How do vaccines help? — a group video, an immune-memory exploration, prevention takeaways, and a link into the case game.
 
 Each topic starts with short, plain-language text and a visual. Scientific terms, the four tetanus forms, tissues, other symptoms, complications, and prognosis remain available in native “Go deeper” disclosures. The topic explorer is complemented by **The Case of the Locked Jaw**, a playable investigation linked from the main navigation and the game section.
 
@@ -130,3 +131,14 @@ The native controlled player has no autoplay, preserves the full frame, includes
 Local Chromium checks passed for direct topic links, symptoms → conversation → recovery flow, all four answers, distinct feedback, retries, native radio keyboard controls, retained choices across topic switches and reset on refresh. Real video playback with sound enabled, metadata, seeking and pausing on topic changes or competing playback passed. The section fits 1920-, 1366- and 390-pixel viewports. The no-JavaScript reading/answer fallback was checked. No runtime errors or missing resources were observed. Review screenshot: `/workspace/scratch/tetanus-doctor-case-review/doctor-case.png`.
 
 These changes are for local review. Push only when the user explicitly requests publication.
+
+
+## Clearer navigation for grades 7–8
+
+The existing format, scientific content, videos, memes, activities and game are preserved. Topic labels and instructions use direct language, and the existing end-of-topic bridges now offer consistent Back/Next links. The main route is microbe → wound → toxin pathway → symptoms → patient story → recovery → vaccination → game. Students can choose any topic from the same sidebar. The three memes remain available in their original feed and through clearly marked optional break links.
+
+Start here and Start learning open the first topic. Selecting a sidebar topic scrolls to its heading; browser Back/Forward restores the previous topic. Discovery activities are explicitly labelled optional and never block Next. Expandable science notes remain in their original sections, with descriptive titles rather than generic “Go deeper” labels. Original colours, fonts, cards, content arrangement and media files are unchanged. A sidebar that exceeds a typical viewport stays in the normal document scroll so all topics remain reachable.
+
+Local Chromium checks passed for the full Next route without completing activities, each Back target, the three meme deep links and answer feedback, browser history, scroll position, optional discoveries, observation comparison, patient question retries, real video playback and pause on navigation, keyboard tabs and desktop/small-window layouts. All scientific introductions, fact cards, expanded explanations, body descriptions, recovery steps, vaccine explanations, meme scenarios and answer choices were compared with the published source and match. No JavaScript errors or missing local resources were observed. The no-JavaScript document still exposes all topics and navigation. Review output is in `/workspace/scratch/tetanus-clear-navigation-review`.
+
+Changes remain local until publication is explicitly requested.
