@@ -1,23 +1,34 @@
-// Enhance the original textbook diagram; all organelle definitions remain readable without JS.
+// Keep the textbook image intact; selectable annotations connect its structures to tetanus.
 (() => {
   const panel = document.querySelector('#cells');
   if (!panel) return;
   const definitions = [...panel.querySelectorAll('[data-cell-part]')];
   const controls = panel.querySelector('#cell-part-controls');
   const highlights = panel.querySelector('#cell-highlights');
-  const buttons = [];
+  const hotspots = panel.querySelector('#cell-tetanus-hotspots');
+  const workspace = panel.querySelector('#cell-diagram-workspace');
+  const signalButtons = [...panel.querySelectorAll('[data-cell-signal]')];
+  const partButtons = [];
+  const hotspotButtons = [];
+  const relevantParts = ['cytoskeleton', 'cytoplasm', 'vesicles', 'membrane'];
+  let signalMode = 'normal';
+  let selectedPart = definitions[0];
 
   function selectPart(selected) {
+    selectedPart = selected;
     definitions.forEach((definition, index) => {
       const active = definition === selected;
       definition.hidden = !active;
-      buttons[index].setAttribute('aria-pressed', String(active));
+      partButtons[index].setAttribute('aria-pressed', String(active));
+      definition.querySelector('.cell-tetanus-note').hidden = signalMode !== 'toxin';
     });
+    hotspotButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.tetanusPart === selected.dataset.cellPart)));
     highlights.replaceChildren();
     selected.dataset.highlight.split(';').forEach(coordinates => {
       const [x, y, width, height] = coordinates.split(',').map(Number);
       const marker = document.createElement('span');
       marker.className = 'cell-highlight';
+      marker.classList.toggle('is-tetanus', signalMode === 'toxin' && relevantParts.includes(selected.dataset.cellPart));
       marker.style.left = `${x}%`;
       marker.style.top = `${y}%`;
       marker.style.width = `${width}%`;
@@ -33,44 +44,46 @@
     button.setAttribute('aria-controls', definition.id);
     button.addEventListener('click', () => selectPart(definition));
     controls.append(button);
-    buttons.push(button);
+    partButtons.push(button);
   });
-  selectPart(definitions[0]);
+  const hotspotNames = [
+    'Cytoskeleton: toxin transport',
+    'Cytoplasm: where the toxin cuts a protein',
+    'Vesicles: blocked messenger release',
+    'Cell membrane: vesicle fusion is disrupted'
+  ];
+  relevantParts.forEach((key, index) => {
+    const definition = definitions.find(part => part.dataset.cellPart === key);
+    const [x, y] = definition.dataset.highlight.split(';')[0].split(',').map(Number);
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = String(index + 1);
+    button.dataset.tetanusPart = key;
+    button.setAttribute('aria-label', `${index + 1}. ${hotspotNames[index]}`);
+    button.setAttribute('aria-controls', definition.id);
+    button.title = hotspotNames[index];
+    button.style.left = `${x}%`;
+    button.style.top = `${y}%`;
+    button.addEventListener('click', () => selectPart(definition));
+    hotspots.append(button);
+    hotspotButtons.push(button);
+  });
+  selectPart(selectedPart);
   controls.hidden = false;
 
-  const states = {
-    normal: {
-      label: 'INSIDE A BRAKING NERVE CELL · NORMAL SIGNALLING',
-      steps: [
-        ['Vesicle reaches the membrane', 'A packet carrying chemical messengers moves to the nerve ending’s outer membrane.'],
-        ['Messenger is released', 'The vesicle joins with the membrane and releases messengers into the synapse, the gap between nerve cells.'],
-        ['The brake message arrives', 'The next nerve cell receives an inhibitory message: a signal that reduces activity.']
-      ],
-      result: 'Body effect: braking signals help control motor nerve cells, allowing muscles to relax normally.'
-    },
-    toxin: {
-      label: 'INSIDE A BRAKING NERVE CELL · WITH TETANUS TOXIN',
-      steps: [
-        ['Vesicle release machinery is damaged', 'Inside the nerve cell, toxin cuts a protein that vesicles need to join with the cell membrane.'],
-        ['Messenger release is blocked', 'Vesicles cannot fuse normally with the membrane. Less inhibitory chemical messenger is released.'],
-        ['Motor nerve cells receive less braking', 'With less braking, motor nerve cells can become too active.']
-      ],
-      result: 'Body effect: changed nerve signals can keep muscles tight or cause painful spasms. This connects an organelle-level process to muscle-tissue effects.'
-    }
-  };
-  const signalButtons = [...panel.querySelectorAll('[data-cell-signal]')];
   signalButtons.forEach(button => button.addEventListener('click', () => {
     const key = button.dataset.cellSignal;
-    if (!Object.hasOwn(states, key)) return;
-    const state = states[key];
+    if (!['normal', 'toxin'].includes(key)) return;
+    const enteringToxinView = signalMode !== 'toxin' && key === 'toxin';
+    signalMode = key;
+    workspace.dataset.signal = key;
     signalButtons.forEach(control => control.setAttribute('aria-pressed', String(control === button)));
-    panel.querySelector('#cell-signal-model').dataset.signal = key;
-    panel.querySelector('#cell-signal-label').textContent = state.label;
-    state.steps.forEach(([title, text], index) => {
-      panel.querySelector(`#cell-signal-step-${index + 1}`).textContent = title;
-      panel.querySelector(`#cell-signal-text-${index + 1}`).textContent = text;
-    });
-    panel.querySelector('#cell-signal-result').textContent = state.result;
+    hotspots.hidden = key !== 'toxin';
+    if (enteringToxinView) selectedPart = definitions.find(part => part.dataset.cellPart === 'vesicles');
+    selectPart(selectedPart);
+    panel.querySelector('#cell-diagram-result').textContent = key === 'toxin'
+      ? 'With tetanus toxin: less inhibitory messenger is released from braking nerve cells. Motor nerve cells receive less braking, so muscles can stay tight or spasm.'
+      : 'Normal nerve-cell signalling: vesicles release inhibitory messengers that help control motor nerve cells and allow muscles to relax.';
   }));
   panel.querySelector('#cell-signal-controls').hidden = false;
 })();
