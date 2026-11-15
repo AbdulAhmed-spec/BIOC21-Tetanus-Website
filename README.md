@@ -14,7 +14,7 @@ The former sequence of long, slide-like sections is now a seven-topic explorer, 
 6. How do people recover? — a short care/recovery sequence.
 7. How do vaccines help? — a group video, an immune-memory exploration, prevention takeaways, and a link into the case game.
 
-Each topic starts with short, plain-language text and a visual. Scientific terms, the four tetanus forms, tissues, other symptoms, complications, and prognosis remain available in native “Go deeper” disclosures. The topic explorer is complemented by **The Case of the Locked Jaw**, a playable investigation linked from the main navigation and the game section.
+Each topic starts with short, plain-language text and a visual. Scientific terms, the four tetanus forms, tissues, other symptoms, complications, and prognosis are visible as ordinary text sections inside their topics. Source credits and the optional skin diagram still use native disclosures. The topic explorer is complemented by **The Case of the Locked Jaw**, a playable investigation linked from the main navigation and the game section.
 
 The site remains full width. Midnight backgrounds, pale reading panels, sky blue, mint and lime accents, and consistent heading styles replace the presentation layout. Lilita One is used for headings and self-hosted DM Sans for readable body text. Font licenses are in `assets/fonts`.
 
@@ -137,8 +137,15 @@ These changes are for local review. Push only when the user explicitly requests 
 
 The existing format, scientific content, videos, memes, activities and game are preserved. Topic labels and instructions use direct language, and the existing end-of-topic bridges now offer consistent Back/Next links. The main route is microbe → wound → toxin pathway → symptoms → patient story → recovery → vaccination → game. Students can choose any topic from the same sidebar. The three memes remain available in their original feed and through clearly marked optional break links.
 
-Start here and Start learning open the first topic. Selecting a sidebar topic scrolls to its heading; browser Back/Forward restores the previous topic. Discovery activities are explicitly labelled optional and never block Next. Expandable science notes remain in their original sections, with descriptive titles rather than generic “Go deeper” labels. Original colours, fonts, cards, content arrangement and media files are unchanged. A sidebar that exceeds a typical viewport stays in the normal document scroll so all topics remain reachable.
+Start here and Start learning open the first topic. Selecting a sidebar topic scrolls to its heading; browser Back/Forward restores the previous topic. Discovery activities are explicitly labelled optional and never block Next. Science notes remain in their original topics with descriptive titles; the main text explanations are always visible. Original colours, fonts, cards, content arrangement and media files are unchanged. A sidebar that exceeds a typical viewport stays in the normal document scroll so all topics remain reachable.
 
 Local Chromium checks passed for the full Next route without completing activities, each Back target, the three meme deep links and answer feedback, browser history, scroll position, optional discoveries, observation comparison, patient question retries, real video playback and pause on navigation, keyboard tabs and desktop/small-window layouts. All scientific introductions, fact cards, expanded explanations, body descriptions, recovery steps, vaccine explanations, meme scenarios and answer choices were compared with the published source and match. No JavaScript errors or missing local resources were observed. The no-JavaScript document still exposes all topics and navigation. Review output is in `/workspace/scratch/tetanus-clear-navigation-review`.
 
 Changes remain local until publication is explicitly requested.
+
+
+## Always-visible science explanations
+
+Eight text disclosures are now ordinary labelled sections: tetanus types, the animation connection, affected tissues, science vocabulary, other symptoms and complications, the patient’s type reminder, recovery factors and personal vaccination. The wording, definition grids, colours, borders and spacing stay in their original locations. Heading bars have no plus/cross toggle, button role or click requirement. Nested symptom headings use the next heading level. The `#tissues` deep link is preserved. Source credits, the optional skin diagram and no-JavaScript quiz answer reveals stay collapsible.
+
+Local browser checks confirmed all eight explanations appear without interaction when their topic is selected, all explanatory text matches the previous version, the tissue deep link works, and the layout fits desktop and smaller windows. Both example sections remain visible without JavaScript. No runtime errors occurred. Review screenshots are in `/workspace/scratch/tetanus-visible-notes-review`. Publish future changes only when explicitly requested.

@@ -106,7 +106,7 @@ details[open]>summary .plus{transform:rotate(45deg)}
 details[open]>summary{border-bottom:1px solid #cbd3ca}
 .details-body{padding:24px;font-size:15px;color:#465669;line-height:1.8}
 .details-body>p:last-child{margin-bottom:0}
-.details-body h3{font-size:16px;color:var(--ink);margin-bottom:14px}
+.details-body h3,.details-body h4{font-size:16px;color:var(--ink);margin-bottom:14px}
 .details-body ul{padding-left:20px;margin-bottom:0}
 .details-body li{margin-bottom:14px}
 .definition-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:0}
@@ -412,3 +412,6 @@ footer p{margin:0}
 .optional-break a{font-weight:650;color:#264d67}
 .discovery-passport .passport-help{font-size:11px;line-height:1.7;color:var(--muted);margin:10px 0 14px}
 @media(max-height:1200px){.topic-sidebar{position:static}}
+
+/* Main text explanations are ordinary sections, always visible within their topic. */
+.information-heading{margin:0;padding:19px 21px;border-bottom:1px solid #cbd3ca;font-family:var(--body-font);font-size:15px;font-weight:650;line-height:1.5;letter-spacing:normal;text-wrap:wrap}
