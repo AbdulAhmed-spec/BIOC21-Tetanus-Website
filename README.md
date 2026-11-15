@@ -4,15 +4,16 @@ A static science website for grades 7–8. No build step or app dependencies. Ma
 
 ## Style and information design
 
-The former sequence of long, slide-like sections is now a seven-topic explorer, with an optional three-post science break:
+The former sequence of long, slide-like sections is now an eight-topic explorer, with an optional three-post science break:
 
 1. What is tetanus? — the bacterium, toxin, spores, and lockjaw.
-2. What’s under the skin? — the wound animation and a personal observation to compare with a science note.
-3. How does it work? — an inspectable wound-to-nerve pathway and comparison of usual and disrupted signals.
-4. What does it do? — a body hotspot map connecting muscle symptoms to nerve control.
-5. Watch the patient story — a doctor–patient video and a question about the form of tetanus.
-6. How do people recover? — a short care/recovery sequence.
-7. How do vaccines help? — a group video, an immune-memory exploration, prevention takeaways, and a link into the case game.
+2. What’s inside a cell? — organelles, nerve-cell communication and cells → tissues → organs → organ systems → organism.
+3. How does tetanus get in? — the wound animation and a personal observation to compare with a science note.
+4. How does the toxin travel? — an inspectable wound-to-nerve pathway and comparison of usual and disrupted signals.
+5. What are the symptoms? — a body hotspot map connecting muscle symptoms to nerve control.
+6. Watch the patient story — a doctor–patient video and a question about the form of tetanus.
+7. How do people recover? — a short care/recovery sequence.
+8. How do vaccines help? — a group video, an immune-memory exploration, prevention takeaways, and a link into the case game.
 
 Each topic starts with short, plain-language text and a visual. Scientific terms, the four tetanus forms, tissues, other symptoms, complications, and prognosis are visible as ordinary text sections inside their topics. Source credits and the optional skin diagram still use native disclosures. The topic explorer is complemented by **The Case of the Locked Jaw**, a playable investigation linked from the main navigation and the game section.
 
@@ -25,12 +26,13 @@ The site remains full width. Midnight backgrounds, pale reading panels, sky blue
 - `script.js`: topic selection, keyboard navigation, hash/deep-link handling, and video visibility logic.
 - `activities.js`: the five information-panel activities and discovery progress, held only in page memory.
 - `reels.js`: the three-post science break, answer feedback, scrolling and keyboard navigation.
+- `cells.js`: organelle selection on the sourced animal-cell diagram and a normal/toxin nerve-signalling comparison.
 - `assets/memes`: the unchanged user-supplied meme images and provenance notes.
 - `games/locked-jaw/`: the playable detective game, its styles, script, offline exporter, and documentation.
 - `assets/images`: illustrations and posters. Drawings are labeled as illustrations rather than micrographs.
 - `assets/videos`: the two previously supplied MP4 files plus the web-compatible MP4 prepared from the new vaccination MOV.
 
-Topic navigation is progressively enhanced: anchors become ARIA tabs with arrow, Home/End, Enter and Space support. One panel is shown at a time when JavaScript is available. All six science articles and the science break are visible with ordinary document links when JavaScript is disabled. Details can be opened with a keyboard. Existing topic hashes, including `#tissues` and `#nervous-system`, reveal the correct article; direct links to details open their content.
+Topic navigation is progressively enhanced: anchors become ARIA tabs with arrow, Home/End, Enter and Space support. One panel is shown at a time when JavaScript is available. All eight science articles and the science break are visible with ordinary document links when JavaScript is disabled. Details can be opened with a keyboard. Existing topic hashes, including `#tissues` and `#nervous-system`, reveal the correct article; direct links to details open their content.
 
 ## Preview
 
@@ -149,3 +151,18 @@ Changes remain local until publication is explicitly requested.
 Eight text disclosures are now ordinary labelled sections: tetanus types, the animation connection, affected tissues, science vocabulary, other symptoms and complications, the patient’s type reminder, recovery factors and personal vaccination. The wording, definition grids, colours, borders and spacing stay in their original locations. Heading bars have no plus/cross toggle, button role or click requirement. Nested symptom headings use the next heading level. The `#tissues` deep link is preserved. Source credits, the optional skin diagram and no-JavaScript quiz answer reveals stay collapsible.
 
 Local browser checks confirmed all eight explanations appear without interaction when their topic is selected, all explanatory text matches the previous version, the tissue deep link works, and the layout fits desktop and smaller windows. Both example sections remain visible without JavaScript. No runtime errors occurred. Review screenshots are in `/workspace/scratch/tetanus-visible-notes-review`. Publish future changes only when explicitly requested.
+
+
+## Cells and Ontario curriculum connection
+
+A new second topic, `#cells`, teaches cell theory; membrane/cytoplasm/nucleus/mitochondria/ribosomes/vacuole/ER/Golgi/lysosomes/vesicles/cytoskeleton functions; plant/animal/bacterial differences; specialized neurons; and the five organization levels from a cell to an organism. Ten selection buttons highlight structures on the unaltered OpenStax animal-cell diagram. The normal/toxin comparison links vesicle fusion and inhibitory-messenger release to muscle symptoms. It explicitly avoids portraying every organelle as damaged by tetanus toxin.
+
+The new diagram is the original OpenStax textbook illustration matching the user’s reference, with visible source/licence links and checksum provenance. All image labels are preserved. Only CSS selection outlines are added. No AI image generation or generative editing was used. See `assets/images/sourced/README.md` and `manifest.json`.
+
+`#curriculum` explains the connection to Ontario Grade 8 Science and Technology, Life Systems — Cells, and is written for the Grade 7/8 audience. `CURRICULUM.md` documents the learning goals and verification scope. It links to the official curriculum without inventing exact expectation codes or claiming complete coverage of the unit. The official Ontario domains could not be retrieved from this environment (proxy HTTP 403), so current expectation numbering and wording were not independently verified. Medical background was checked in the accessible OpenStax Microbiology source for nervous-system infections and bacterial virulence.
+
+The main route now runs introduction → cells → wound → toxin → symptoms → patient → recovery → vaccination → game. Existing topic IDs and supplied content remain intact. The sidebar and topic numbers include the addition; deep links to `#curriculum` and `#cell-organization` reveal the new topic. The original five optional discoveries remain unchanged, and no extra completion requirement or score was added. Without JavaScript, all ten cell-part explanations, both signalling explanations and the organization sequence remain readable.
+
+Local Chromium checks passed for all ten selections and outlines, native keyboard operation, reversible normal/toxin states, retained selections across topics, all five organization levels, Next/Back and deep links, all nine tabs at desktop/small-window sizes, no-JavaScript content and the image checksum. Existing fact cards, visible explanations, questions, answers and symptom/recovery/vaccine content match the previous revision. No runtime errors or missing local resources were observed. Screenshots and validation notes are in `/workspace/scratch/tetanus-cells-review`.
+
+Keep changes local and push only when explicitly requested.

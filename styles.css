@@ -415,3 +415,47 @@ footer p{margin:0}
 
 /* Main text explanations are ordinary sections, always visible within their topic. */
 .information-heading{margin:0;padding:19px 21px;border-bottom:1px solid #cbd3ca;font-family:var(--body-font);font-size:15px;font-weight:650;line-height:1.5;letter-spacing:normal;text-wrap:wrap}
+
+/* Cell structures and organization use the existing topic-panel format. */
+.cell-introduction,.cells-panel section>p{font-size:15px;line-height:1.85;color:#465669}
+.cell-explorer,.cell-signalling,.cell-organization,.cell-curriculum{margin-top:32px}
+.cells-panel section>h3{font-size:23px;line-height:1.35;margin-bottom:16px}
+.cell-diagram{margin:22px 0 24px}
+.cell-diagram-frame{position:relative;width:100%;max-width:813px;margin:0 auto;background:#fff;border:1px solid #cbd3ca;border-radius:12px;overflow:hidden}
+.cell-diagram-frame>img{display:block;width:100%;height:auto;object-fit:contain}
+.cell-diagram figcaption{max-width:813px;margin:14px auto 0;font-size:11px;line-height:1.8;color:#526074}
+.cell-diagram figcaption a{color:#315c7a}
+.cell-highlights{position:absolute;inset:0;pointer-events:none}
+.cell-highlight{position:absolute;border:3px solid #285f92;box-shadow:0 0 0 2px #fff9;border-radius:50%;transform:translate(-50%,-50%);background:#a6d1f51c}
+.cell-part-controls{gap:9px}
+.cells-panel button:focus-visible{outline:3px solid #47734c;outline-offset:4px}
+.cell-part-notes{margin:0 0 24px;padding:20px 0;border-top:1px solid #cbd3ca;border-bottom:1px solid #cbd3ca}
+.cell-part-notes dt{font-size:20px;font-weight:700;line-height:1.4;margin-bottom:10px}
+.cell-part-notes dd{margin:0;color:#465669;font-size:15px;line-height:1.85}
+.cell-part-notes>div+div{margin-top:20px}
+.cell-part-notes>div[hidden]+div{margin-top:0}
+.cells-panel .cell-comparison{font-size:14px;line-height:1.85;margin-bottom:16px}
+.cell-signal-model{border:1px solid #c4d0bb;border-radius:12px;padding:24px;background:#edf0e5}
+.cell-model-label{font-size:9px;font-weight:700;line-height:1.7;letter-spacing:1px;color:#4d6a40;margin:0 0 22px}
+.cell-signal-path{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:0;padding:0;counter-reset:cell-message}
+.cell-signal-path li{min-width:0;counter-increment:cell-message}
+.cell-signal-path li::before{content:'0' counter(cell-message);display:block;font-size:10px;font-weight:700;color:#4d6a40;margin-bottom:12px}
+.cell-signal-path strong{font-size:15px;line-height:1.5;display:block;margin-bottom:10px}
+.cell-signal-path p{font-size:13px;line-height:1.85;color:#465669;margin:0}
+.cell-signal-result{border-top:1px solid #b7c8ab;padding-top:18px;margin:22px 0 0;font-size:14px;font-weight:600;line-height:1.85;color:#385435}
+.cell-signal-model[data-signal=toxin]{background:#f0e3da;border-color:#d2b8a8}
+.cell-signal-model[data-signal=toxin] .cell-model-label,.cell-signal-model[data-signal=toxin] .cell-signal-path li::before{color:#854b35}
+.cell-signal-model[data-signal=toxin] .cell-signal-result{color:#74442f;border-color:#caa995}
+.cells-panel .cell-mechanism-note{font-size:12px;line-height:1.85;color:#526074;margin:18px 0}
+.organization-path{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;list-style:none;margin:24px 0;padding:0}
+.organization-path li{min-width:0;border-top:3px solid #7ca08b;padding-top:14px}
+.organization-path li>span{display:block;font-size:8px;line-height:1.6;letter-spacing:.7px;font-weight:700;color:#527344;margin-bottom:12px}
+.organization-path h4{font-size:15px;line-height:1.5;margin:0 0 10px;color:var(--ink)}
+.organization-path p{font-size:12px;line-height:1.85;margin:0;color:#465669}
+.cell-curriculum{border-top:1px solid #cbd3ca;padding-top:28px}
+.curriculum-connections{margin:0 0 20px}
+.curriculum-connections>div{margin-top:17px}
+.curriculum-connections dt{font-size:14px;line-height:1.7;font-weight:700}
+.curriculum-connections dd{font-size:14px;line-height:1.85;margin:4px 0 0;color:#465669}
+@media(max-width:1100px){.organization-path{grid-template-columns:1fr 1fr}.cell-signal-path{grid-template-columns:1fr}.cell-signal-path li{border-bottom:1px solid #cad3c3;padding-bottom:16px}.cell-signal-path li:last-child{border:0;padding:0}}
+@media(max-width:760px){.cells-panel section>h3{font-size:21px}.cell-part-controls button{font-size:11px;padding:9px 11px}.cell-signal-model{padding:19px}.cell-diagram figcaption{font-size:10px}.cell-highlight{border-width:2px}.organization-path{grid-template-columns:1fr 1fr}}

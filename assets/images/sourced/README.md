@@ -1,9 +1,10 @@
 # Sourced scientific images
 
-These three original JPGs are reproduced from OpenStax's **Anatomy and Physiology 2e** source repository. They replace generated skin/nerve illustrations in the website's wound and toxin-pathway topics. No image-generation tool or generative editing was used.
+These original JPGs are reproduced from OpenStax's **Anatomy and Physiology 2e** source repository. They replace generated skin/nerve illustrations in the website's wound and toxin-pathway topics. No image-generation tool or generative editing was used.
 
 | File | Figure | Textbook section |
 | --- | --- | --- |
+| `openstax-animal-cell.jpg` | Animal Cell and Components | 3.2 The Cytoplasm and Cellular Organelles |
 | `openstax-skin-layers.jpg` | Layers of Skin | 5.1 Layers of the Skin |
 | `openstax-neuron.jpg` | Parts of a Neuron | 12.2 Nervous Tissue |
 | `openstax-synapse.jpg` | The Synapse | 12.5 Communication Between Neurons |
@@ -19,3 +20,10 @@ The wound still in pathway stop 2 is the existing `../wound-poster.jpg`, previou
 `user-tetanus-micrograph.png` is the exact 471 × 354 PNG supplied by the project group in a ZIP attachment. Its bytes were preserved on extraction. The user supplied this source page: <https://en.namu.wiki/w/%ED%8C%8C%EC%83%81%ED%92%8D%EA%B7%A0>. The source page could not be retrieved here, so the original photographer and reuse licence are not independently verified. This image is **not** covered by the OpenStax licence above.
 
 The first topic uses this photograph instead of the generated specimen pictures. The Spore and Bacterium controls show non-destructive CSS observation markers on the photograph. The Toxin control removes the markers and explicitly explains that toxin molecules are not visible in this micrograph. No generative editing, repainting or synthetic image was used for this replacement.
+
+
+## Animal-cell diagram for the Cells lesson
+
+`openstax-animal-cell.jpg` is the original 813 × 645 labelled textbook figure from the same pinned OpenStax source revision as the other diagrams. It matches the animal-cell illustration supplied as the user's reference. The JPEG was downloaded directly from `media/0312_Animal_Cell_and_Components.jpg`; its bytes and labels are preserved, with source URL, revision, licence and checksum in the manifest. The source repository's CC BY-NC-SA 4.0 licence was checked again during this addition. No image generation, redrawing or generative editing was used.
+
+The website adds non-destructive CSS outlines to selected structures. These outlines are interface markers, not edits to the diagram. Captions identify the figure as a generalized animal-cell drawing. The tetanus comparison separately explains blocked vesicle-mediated inhibitory-messenger release in specialized nerve cells; it does not show or claim toxin damage to every organelle in the generic cell.

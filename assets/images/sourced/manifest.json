@@ -48,5 +48,18 @@
     "rights_note": "User-supplied image. Original photographer and licence were not provided or independently verified. Not covered by the OpenStax licence.",
     "modifications": "None. Original PNG bytes preserved; non-destructive CSS observation markers are displayed over it.",
     "sha256": "12342bb9d08f3438336362cd0a36806cde3804616354ad2a857302904cc75a80"
+  },
+  {
+    "file": "openstax-animal-cell.jpg",
+    "title": "Animal Cell and Components",
+    "creator": "OpenStax",
+    "book": "Anatomy and Physiology 2e",
+    "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-2-the-cytoplasm-and-cellular-organelles",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-anatomy-physiology/5ae32b3f4bc24ed003e91dc38bf47dba80751044/media/0312_Animal_Cell_and_Components.jpg",
+    "source_commit": "5ae32b3f4bc24ed003e91dc38bf47dba80751044",
+    "license": "CC BY-NC-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "modifications": "None; original JPG preserved with labels. CSS outlines point to selected structures without changing image bytes.",
+    "sha256": "9a1a2f87c541e1caff38b0c639ffd807832d6745983301f6311455bfffc61fa5"
   }
 ]
