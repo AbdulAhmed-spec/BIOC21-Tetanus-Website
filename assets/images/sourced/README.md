@@ -27,3 +27,22 @@ The first topic uses this photograph instead of the generated specimen pictures.
 `openstax-animal-cell.jpg` is the original 813 × 645 labelled textbook figure from the same pinned OpenStax source revision as the other diagrams. It matches the animal-cell illustration supplied as the user's reference. The JPEG was downloaded directly from `media/0312_Animal_Cell_and_Components.jpg`; its bytes and labels are preserved, with source URL, revision, licence and checksum in the manifest. The source repository's CC BY-NC-SA 4.0 licence was checked again during this addition. No image generation, redrawing or generative editing was used.
 
 The website adds non-destructive CSS outlines to selected structures. These outlines are interface markers, not edits to the diagram. Captions identify the figure as a generalized animal-cell drawing. The diagram’s selectable tetanus annotations explain transport and blocked vesicle-mediated inhibitory-messenger release in specialized nerve cells; it does not show or claim toxin damage to every organelle in the generic cell.
+
+
+## Cell-to-organism sequence pictures
+
+The organization sequence now uses five published, non-AI drawings. No image-generation tool, generative editor or redraw was used. All source bytes are preserved and pinned URLs/checksums are recorded in `manifest.json`.
+
+| Level | File | Creator and licence | View on the website |
+| --- | --- | --- | --- |
+| Neuron | `organization-neuron.svg` | DBCLS, via Bioicons; CC BY 4.0 | Complete original SVG |
+| Nervous tissue | `organization-nervous-tissue.jpg` | OpenStax, Anatomy and Physiology 2e §4.5; CC BY-NC-SA 4.0 | Left drawing panel, displayed using CSS |
+| Spinal cord | `organization-spinal-cord.jpg` | OpenStax, Anatomy and Physiology 2e §13.2; CC BY-NC-SA 4.0 | Upper cross-section drawing, displayed using CSS |
+| Nervous system | `organization-nervous-system.jpg` | OpenStax, Anatomy and Physiology 2e §12.1; CC BY-NC-SA 4.0 | Complete original drawing |
+| Whole person | `organization-person.svg` | Laura Dworatschek / OpenMoji; CC BY-SA 4.0 | Complete original SVG, from release 13.1.0 |
+
+The OpenMoji metadata at release 13.1.0 names Laura Dworatschek and dates the drawing to May 6, 2019. The original release's CC BY-SA 4.0 licence is included as `LICENSE-CC-BY-SA-4.0.txt`. The DBCLS drawing and its CC BY 4.0 attribution were checked in Bioicons' icon index at the recorded revision; Bioicons describes its library as scientific illustrations for vector drawing tools.
+
+The tissue and spinal-cord source figures also contain University of Michigan micrographs © 2012. Only the drawing panels are shown in the sequence. CSS clips the tissue view to source coordinates x=0–976 (of 2246) and the spinal-cord view to y=0–900 (of 1883). Those bounds exclude the photographs; the JPEG files are not edited. Each picture links to its full original figure. The original photographs' University of Michigan credit is retained in the website's image-credits section and manifest, even though the thumbnails do not display them.
+
+The spinal-cord picture is explicitly labelled as a cross-section. The five drawings are not to scale. Credits below the sequence link to the existing credits disclosure, so no extra expandable panels were added to the lesson.

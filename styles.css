@@ -441,6 +441,18 @@ footer p{margin:0}
 .organization-path li>span{display:block;font-size:8px;line-height:1.6;letter-spacing:.7px;font-weight:700;color:#527344;margin-bottom:12px}
 .organization-path h4{font-size:15px;line-height:1.5;margin:0 0 10px;color:var(--ink)}
 .organization-path p{font-size:12px;line-height:1.85;margin:0;color:#465669}
+.organization-picture{display:grid;place-items:center;position:relative;width:100%;height:160px;padding:10px;margin:0 0 12px;background:white;border:1px solid #d0d8cd;border-radius:10px;overflow:hidden}
+.organization-picture:focus-visible{outline:3px solid #47734c;outline-offset:4px}
+.organization-image-crop{display:block;position:relative;width:100%;height:100%;overflow:hidden}
+.organization-picture img{display:block;width:100%;height:100%;object-fit:contain}
+/* Display only the published drawing panels, with full originals available through the links. */
+.organization-picture--tissue .organization-image-crop{height:auto;aspect-ratio:976/847}
+.organization-picture--tissue img{position:absolute;left:0;top:0;width:230.122951%;max-width:none;height:auto}
+.organization-picture--spinal .organization-image-crop{height:auto;aspect-ratio:1642/900}
+.organization-picture--spinal img{position:absolute;left:0;top:0;width:100%;height:auto}
+.organization-view-label{display:block;font-size:10px;line-height:1.6;color:#526074;margin:-5px 0 9px}
+.cells-panel .organization-picture-credit{font-size:11px;line-height:1.85;color:#526074;margin:16px 0 22px}
+.organization-picture-credit a{color:#315c7a}
 @media(max-width:1100px){.organization-path{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.cells-panel section>h3{font-size:21px}.cell-part-controls button{font-size:11px;padding:9px 11px}.cell-diagram figcaption{font-size:10px}.cell-highlight{border-width:2px}.organization-path{grid-template-columns:1fr 1fr}}
 

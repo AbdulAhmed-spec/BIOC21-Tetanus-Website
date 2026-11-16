@@ -61,5 +61,71 @@
     "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
     "modifications": "None; original JPG preserved with labels. CSS outlines point to selected structures without changing image bytes.",
     "sha256": "9a1a2f87c541e1caff38b0c639ffd807832d6745983301f6311455bfffc61fa5"
+  },
+  {
+    "file": "organization-neuron.svg",
+    "title": "Neuron",
+    "creator": "DBCLS (Database Center for Life Science)",
+    "source_page": "https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Cell_culture/DBCLS/neuron.svg",
+    "source_file": "https://raw.githubusercontent.com/duerrsimon/bioicons/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Cell_culture/DBCLS/neuron.svg",
+    "source_commit": "d29e766ea7580b8063c4f47b29e872db40a4d979",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "modifications": "None; original SVG bytes retained. Displayed as a complete drawing.",
+    "sha256": "d37209d5e49102950270cc81a9dd0e3dbbbefa730b6fbc2b40c7788546990926"
+  },
+  {
+    "file": "organization-nervous-tissue.jpg",
+    "title": "Nervous Tissue",
+    "creator": "OpenStax",
+    "book": "Anatomy and Physiology 2e",
+    "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-5-nervous-tissue-mediates-perception-and-response",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-anatomy-physiology/5ae32b3f4bc24ed003e91dc38bf47dba80751044/media/416_Nervous_Tissue-new.jpg",
+    "source_commit": "5ae32b3f4bc24ed003e91dc38bf47dba80751044",
+    "license": "CC BY-NC-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "modifications": "Original JPEG unchanged. CSS displays the left illustration panel (first 976 of 2246 pixels), not the adjacent micrograph. Full original figure is linked.",
+    "additional_credit": "The full source figure also includes a micrograph provided by the Regents of University of Michigan Medical School © 2012; that micrograph is not displayed in the thumbnail.",
+    "sha256": "f9a9a5b0c160d9f7656f801866796d6695fa0870046fdaa51e5be384daaaa6bf"
+  },
+  {
+    "file": "organization-spinal-cord.jpg",
+    "title": "Cross-section of Spinal Cord",
+    "creator": "OpenStax",
+    "book": "Anatomy and Physiology 2e",
+    "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-anatomy-physiology/5ae32b3f4bc24ed003e91dc38bf47dba80751044/media/1313_Spinal_Cord_Cross_Section.jpg",
+    "source_commit": "5ae32b3f4bc24ed003e91dc38bf47dba80751044",
+    "license": "CC BY-NC-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "modifications": "Original JPEG unchanged. CSS displays the upper drawing panel (first 900 of 1883 pixels), not the lower micrograph. Full original figure is linked.",
+    "additional_credit": "The full source figure also includes a micrograph provided by the Regents of University of Michigan Medical School © 2012; that micrograph is not displayed in the thumbnail.",
+    "sha256": "fe8415b361505ba745b9063c29ad192549ecd5300ed44ae3ada0132c779da8e6"
+  },
+  {
+    "file": "organization-nervous-system.jpg",
+    "title": "Central and Peripheral Nervous System",
+    "creator": "OpenStax",
+    "book": "Anatomy and Physiology 2e",
+    "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-1-basic-structure-and-function-of-the-nervous-system",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-anatomy-physiology/5ae32b3f4bc24ed003e91dc38bf47dba80751044/media/1201_Overview_of_Nervous_System.jpg",
+    "source_commit": "5ae32b3f4bc24ed003e91dc38bf47dba80751044",
+    "license": "CC BY-NC-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "modifications": "None; original JPEG bytes retained. Complete drawing displayed.",
+    "sha256": "b07f0cd6d1ce02b95b1a5e6d3f720b48554083cf9966b0c95c95cde1a88a2e7a"
+  },
+  {
+    "file": "organization-person.svg",
+    "title": "Person standing (1F9CD)",
+    "creator": "Laura Dworatschek / OpenMoji",
+    "source_page": "https://openmoji.org/library/emoji-1F9CD/",
+    "source_file": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/13.1.0/color/svg/1F9CD.svg",
+    "source_version": "13.1.0",
+    "creation_date": "2019-05-06",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "None; original SVG bytes retained. Complete drawing displayed.",
+    "sha256": "5de868175fd349d4e65af04ddae3bf5eb95f221b79294fa06b397dcc51172b0e"
   }
 ]

@@ -175,3 +175,12 @@ The original textbook diagram now has Normal cell jobs / With tetanus toxin cont
 Other organelles remain selectable for their normal functions and appropriate supporting context. They are not highlighted as toxin-damaged. The two contexts are nerve transport and action inside inhibitory neurons, not a claim that all stages occur in one generic animal cell. The original JPEG bytes, labels, source credits and licence remain unchanged. All normal jobs, neuron specialization, plant/bacterial comparisons, and five organization levels are retained.
 
 Local Chromium checks passed for removal of the public curriculum section/badge, all ten cell-part jobs, four diagram hotspots, choice-specific explanations, reversible modes, native keyboard controls, retained choices across topic changes, desktop/small-window layout, no-JavaScript definitions and tetanus notes, and unchanged source-image checksum. No runtime errors or missing resources were observed. Actual review screenshots and validation notes are in `/workspace/scratch/tetanus-integrated-cell-review`. Keep these changes local until a push is explicitly requested.
+
+
+## Pictures for cell organization
+
+The five existing organization columns now include published drawings: a DBCLS neuron, OpenStax nervous tissue/spinal-cord cross-section/nervous-system illustrations, and Laura Dworatschek's OpenMoji person. Existing headings and descriptions are unchanged. Images are displayed in consistent frames, with illustration-only CSS views for the two textbook figures that also contain micrographs. The spinal cord is labelled as a cross-section, and a not-to-scale caption links to full source credits. Each picture opens its complete original in a new tab. No AI generation or generative editing was used.
+
+Source files are self-hosted; pinned provenance, licences, clipping notes and hashes are in `assets/images/sourced/manifest.json` and its README. The OpenMoji licence copy is included. Pictures are lazy-loaded and remain available without JavaScript. Keep these changes local until a push is explicitly requested.
+
+Local Chromium checks passed for all five image loads, unchanged headings/descriptions, illustration-only clipping, desktop/small-window layout, keyboard links to originals, the credits deep link, no-JavaScript image loading and source checksums. No runtime errors or missing resources were observed. Review screenshots are in `/workspace/scratch/tetanus-organization-pictures-review`.
