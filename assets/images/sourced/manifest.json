@@ -112,7 +112,7 @@
     "source_commit": "5ae32b3f4bc24ed003e91dc38bf47dba80751044",
     "license": "CC BY-NC-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "modifications": "None; original JPEG bytes retained. Complete drawing displayed.",
+    "modifications": "Original JPEG bytes unchanged. The current spinal-cord thumbnail uses a CSS lengthwise view of source x=340–520, y=103–540, showing the cord from its upper end to its tapered lower end with nearby nerve roots. The complete original remains linked.",
     "sha256": "b07f0cd6d1ce02b95b1a5e6d3f720b48554083cf9966b0c95c95cde1a88a2e7a"
   },
   {
@@ -127,5 +127,44 @@
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
     "modifications": "None; original SVG bytes retained. Complete drawing displayed.",
     "sha256": "5de868175fd349d4e65af04ddae3bf5eb95f221b79294fa06b397dcc51172b0e"
+  },
+  {
+    "file": "exploringnature-neuron.png",
+    "title": "Neuron — project-supplied Exploring Nature screenshot",
+    "creator": "Exploring Nature; individual artist not independently verified",
+    "provided_by": "Project group, uploaded ZIP attachment",
+    "source_page": "https://exploringnature.org/connecting-the-cells-to-tissues-to-organs-to-organ-systems-diagram/",
+    "upload_filename": "Screenshot 2026-11-15 at 21-18-45 Connecting the Cells to Tissues to Organs to Organ Systems Diagram - Exploring Nature.zip",
+    "archive_member": "Screenshot 2026-11-15 at 21-18-45 Connecting the Cells to Tissues to Organs to Organ Systems Diagram - Exploring Nature.png",
+    "license": null,
+    "rights_note": "User-supplied screenshot from the requested source page. Original copyright and reuse terms were not independently verified. This file is not covered by the OpenStax or OpenMoji licences.",
+    "modifications": "Original PNG bytes preserved. CSS excludes the last 6 right-edge pixels (an adjacent-figure fragment), while keeping the neuron and its label. Full uploaded image is linked.",
+    "sha256": "26c3a5f3c82c53f2a7317ebf0c081d512b750418e87c37234d0bda39c79cd0dd"
+  },
+  {
+    "file": "exploringnature-nervous-tissue.png",
+    "title": "Nervous Tissue — project-supplied Exploring Nature screenshot",
+    "creator": "Exploring Nature; individual artist not independently verified",
+    "provided_by": "Project group, uploaded ZIP attachment",
+    "source_page": "https://exploringnature.org/connecting-the-cells-to-tissues-to-organs-to-organ-systems-diagram/",
+    "upload_filename": "Screenshot 2026-11-15 at 21-19-05 Connecting the Cells to Tissues to Organs to Organ Systems Diagram - Exploring Nature.zip",
+    "archive_member": "Screenshot 2026-11-15 at 21-19-05 Connecting the Cells to Tissues to Organs to Organ Systems Diagram - Exploring Nature.png",
+    "license": null,
+    "rights_note": "User-supplied screenshot from the requested source page. Original copyright and reuse terms were not independently verified. This file is not covered by the OpenStax or OpenMoji licences.",
+    "modifications": "None. Original PNG bytes from the uploaded ZIP are preserved. Displayed at responsive sizes without generative editing.",
+    "sha256": "81282fbe205c5fba27420f11c67a912eda634686ac83652ebcd031dcf5500e0b"
+  },
+  {
+    "file": "exploringnature-nervous-system.png",
+    "title": "Nervous System — project-supplied Exploring Nature screenshot",
+    "creator": "Exploring Nature; individual artist not independently verified",
+    "provided_by": "Project group, uploaded ZIP attachment",
+    "source_page": "https://exploringnature.org/connecting-the-cells-to-tissues-to-organs-to-organ-systems-diagram/",
+    "upload_filename": "Screenshot 2026-11-15 at 21-19-58 Connecting the Cells to Tissues to Organs to Organ Systems Diagram - Exploring Nature.zip",
+    "archive_member": "Screenshot 2026-11-15 at 21-19-58 Connecting the Cells to Tissues to Organs to Organ Systems Diagram - Exploring Nature.png",
+    "license": null,
+    "rights_note": "User-supplied screenshot from the requested source page. Original copyright and reuse terms were not independently verified. This file is not covered by the OpenStax or OpenMoji licences.",
+    "modifications": "Original PNG bytes preserved. CSS excludes the last 5 right-edge pixels (fragments of an adjacent figure), while keeping the nervous-system drawing. Full uploaded image is linked.",
+    "sha256": "c5520ca50ad37724f612a77a8e03068ee3526c6be95c3dc2a2ebc16e818b1237"
   }
 ]

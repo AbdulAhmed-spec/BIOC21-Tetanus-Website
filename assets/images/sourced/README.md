@@ -29,7 +29,7 @@ The first topic uses this photograph instead of the generated specimen pictures.
 The website adds non-destructive CSS outlines to selected structures. These outlines are interface markers, not edits to the diagram. Captions identify the figure as a generalized animal-cell drawing. The diagram’s selectable tetanus annotations explain transport and blocked vesicle-mediated inhibitory-messenger release in specialized nerve cells; it does not show or claim toxin damage to every organelle in the generic cell.
 
 
-## Cell-to-organism sequence pictures
+## Earlier cell-to-organism sequence pictures
 
 The organization sequence now uses five published, non-AI drawings. No image-generation tool, generative editor or redraw was used. All source bytes are preserved and pinned URLs/checksums are recorded in `manifest.json`.
 
@@ -46,3 +46,18 @@ The OpenMoji metadata at release 13.1.0 names Laura Dworatschek and dates the dr
 The tissue and spinal-cord source figures also contain University of Michigan micrographs © 2012. Only the drawing panels are shown in the sequence. CSS clips the tissue view to source coordinates x=0–976 (of 2246) and the spinal-cord view to y=0–900 (of 1883). Those bounds exclude the photographs; the JPEG files are not edited. Each picture links to its full original figure. The original photographs' University of Michigan credit is retained in the website's image-credits section and manifest, even though the thumbnails do not display them.
 
 The spinal-cord picture is explicitly labelled as a cross-section. The five drawings are not to scale. Credits below the sequence link to the existing credits disclosure, so no extra expandable panels were added to the lesson.
+
+
+## Current Exploring Nature replacements
+
+The neuron, nervous-tissue and nervous-system thumbnails now use the three PNG screenshots supplied by the project group in ZIP attachments. Their source page is <https://exploringnature.org/connecting-the-cells-to-tissues-to-organs-to-organ-systems-diagram/>. Direct access to that page was blocked in this environment, so the supplied files were used as the source; individual artist and reuse terms were not independently verified. These PNGs are not covered by the OpenStax/OpenMoji Creative Commons licences.
+
+| Current item | File | Source and presentation |
+| --- | --- | --- |
+| Neuron | `exploringnature-neuron.png` | First uploaded PNG; CSS excludes only the last 6 right-edge pixels from a neighbouring figure |
+| Nervous tissue | `exploringnature-nervous-tissue.png` | Second uploaded PNG, shown complete |
+| Spinal cord | `organization-nervous-system.jpg` | Existing OpenStax §12.1 full-length drawing; CSS focuses on x=340–520 and y=103–540 to show the cord lengthwise from its upper end to its tapered lower end, with nearby roots |
+| Nervous system | `exploringnature-nervous-system.png` | Third uploaded PNG; CSS excludes only the last 5 right-edge pixels from a neighbouring figure |
+| You | `organization-person.svg` | Existing Laura Dworatschek / OpenMoji drawing, unchanged |
+
+The original uploaded PNG bytes and all source drawings are unchanged. No AI generation, redrawing or generative editing was used. Every thumbnail links to its full source file. ZIP names/member names and exact SHA-256 checksums are in the manifest. The former cross-section and other earlier assets remain in this folder for source history but are no longer used in this sequence. Existing licences apply to their respective originals only.

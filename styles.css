@@ -445,11 +445,9 @@ footer p{margin:0}
 .organization-picture:focus-visible{outline:3px solid #47734c;outline-offset:4px}
 .organization-image-crop{display:block;position:relative;width:100%;height:100%;overflow:hidden}
 .organization-picture img{display:block;width:100%;height:100%;object-fit:contain}
-/* Display only the published drawing panels, with full originals available through the links. */
-.organization-picture--tissue .organization-image-crop{height:auto;aspect-ratio:976/847}
-.organization-picture--tissue img{position:absolute;left:0;top:0;width:230.122951%;max-width:none;height:auto}
-.organization-picture--spinal .organization-image-crop{height:auto;aspect-ratio:1642/900}
-.organization-picture--spinal img{position:absolute;left:0;top:0;width:100%;height:auto}
+/* Focus the full spinal cord lengthwise; the complete published source stays linked. */
+.organization-picture--cord-lengthwise .organization-image-crop{width:auto;height:100%;aspect-ratio:180/437}
+.organization-picture--cord-lengthwise img{position:absolute;left:-188.888889%;top:-23.569794%;width:467.222222%;max-width:none;height:auto}
 .organization-view-label{display:block;font-size:10px;line-height:1.6;color:#526074;margin:-5px 0 9px}
 .cells-panel .organization-picture-credit{font-size:11px;line-height:1.85;color:#526074;margin:16px 0 22px}
 .organization-picture-credit a{color:#315c7a}
@@ -473,3 +471,9 @@ footer p{margin:0}
 .cell-diagram-source{margin:0;font-size:11px;line-height:1.8}
 .cell-diagram-source a{font-size:11px}
 @media(max-width:1100px){.cell-diagram-workspace{grid-template-columns:1fr}.cell-diagram-notes{border-left:0;border-top:1px solid #cbd3ca;padding:20px 0 0}.cell-tetanus-hotspots button{width:26px;height:26px;font-size:11px}}
+
+/* Keep the supplied screenshot drawings, hiding only thin fragments of adjacent figures at their right edges. */
+.organization-picture--exploring-neuron .organization-image-crop{width:auto;height:100%;max-width:100%;aspect-ratio:164/136}
+.organization-picture--exploring-neuron img{position:absolute;left:0;top:50%;transform:translateY(-50%);width:103.658537%;max-width:none;height:auto}
+.organization-picture--exploring-system .organization-image-crop{width:auto;height:100%;max-width:100%;aspect-ratio:80/207}
+.organization-picture--exploring-system img{position:absolute;left:0;top:50%;transform:translateY(-50%);width:106.25%;max-width:none;height:auto}
