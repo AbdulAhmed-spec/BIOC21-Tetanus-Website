@@ -5,11 +5,11 @@
 :root{--ink:#101d32;--deep:#0b1526;--panel:#172b43;--line:#a6d1f52b;--blue:#a6d1f5;--cream:#f7f4e9;--lime:#c8f481;--mint:#83d8c1;--coral:#edb49e;--muted:#b6c5d7;--gold:#d3bc80}
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(ellipse at 85% 0%,#28476655,transparent 40%),var(--ink);color:var(--cream);font:15px/1.6 DM,system-ui,sans-serif;min-height:100vh}
-button,a,summary{-webkit-tap-highlight-color:transparent}
+button,a{-webkit-tap-highlight-color:transparent}
 button{font:inherit;cursor:pointer}
 a{color:inherit;text-underline-offset:4px}
 button:disabled{cursor:not-allowed}
-button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--lime);outline-offset:5px}
+button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--lime);outline-offset:5px}
 button.primary:focus-visible,.clue-card:focus-visible,.evidence-tile:focus-visible,.slot:focus-visible{outline-color:#426a37}
 [hidden]{display:none!important}
 p{margin:0 0 18px}
@@ -163,7 +163,7 @@ h1>span{color:var(--blue)}
 .feedback{margin:17px 0 0;min-height:24px;font-size:12px;color:var(--mint)}
 .feedback:not(:empty){padding:12px 16px;border:1px solid var(--line);border-radius:8px;background:#14283f}
 .teacher-notes{margin-top:18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted)}
-.teacher-notes summary{padding:18px 0;font-size:11px;cursor:pointer}
+.teacher-notes h2{margin:18px 0 10px;font-size:15px;color:var(--cream)}
 .teacher-notes>div{font-size:12px;line-height:1.9;max-width:1000px;padding-bottom:15px}
 .teacher-notes p:last-child{margin-bottom:0}
 footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 0 32px;font-size:10px;color:#92a6bc}

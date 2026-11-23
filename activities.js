@@ -16,7 +16,7 @@
     const badge = document.querySelector(`[data-activity-badge="${id}"]`);
     badge.textContent = 'EXPLORED';
     badge.classList.add('explored');
-    const names = {microbe:'Specimen notes',observation:'Observation comparison',route:'Toxin pathway',body:'Muscle effects',vaccination:'How vaccines work'};
+    const names = {microbe:'Specimen notes',observation:'Observation comparison',route:'Toxin pathway',body:'Muscle effects'};
     document.querySelector('#discovery-status').textContent = `${names[id]} explored. ${completed.size} of ${totalActivities} optional activities explored. You can continue to the next topic at any time.`;
   }
 
@@ -98,12 +98,6 @@
     document.querySelector('#body-progress').textContent = `${bodyNames[id]} explored. ${visited.body.size} of 3 muscle areas inspected.${visited.body.size===3?' Different symptoms, one link: disrupted nerve control.':''}`;
     if (visited.body.size===3) completeActivity('body');
   }));
-
-  const vaccineExplanation = document.querySelector('#vaccine-explanation');
-  document.querySelector('[data-activity-badge="vaccination"]').hidden = false;
-  vaccineExplanation.addEventListener('toggle', () => {
-    if (vaccineExplanation.open) completeActivity('vaccination');
-  });
 
   const form = document.querySelector('#observation-form');
   const input = document.querySelector('#observation-input');

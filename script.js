@@ -34,10 +34,6 @@ function revealTarget(hash) {
   if (!target) return null;
   const panel = target.closest('.topic-panel');
   if (panel) selectTopic(panel.id);
-  // Open deep-linked explanations and references before moving focus/scroll.
-  for (let node = target; node; node = node.parentElement) {
-    if (node.tagName === 'DETAILS') node.open = true;
-  }
   return target;
 }
 selectTopic('about');
