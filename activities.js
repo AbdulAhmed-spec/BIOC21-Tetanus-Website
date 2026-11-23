@@ -3,7 +3,7 @@
 (() => {
   const completed = new Set();
   const totalActivities = document.querySelectorAll('[data-discovery]').length;
-  const visited = {microbe:new Set(), route:new Set(), body:new Set(), vaccination:new Set()};
+  const visited = {microbe:new Set(), route:new Set(), body:new Set()};
   const passport = document.querySelector('#discovery-passport');
   passport.hidden = false;
   document.querySelector('.sidebar-note').hidden = true;
@@ -16,7 +16,7 @@
     const badge = document.querySelector(`[data-activity-badge="${id}"]`);
     badge.textContent = 'EXPLORED';
     badge.classList.add('explored');
-    const names = {microbe:'Specimen notes',observation:'Observation comparison',route:'Toxin pathway',body:'Muscle effects',vaccination:'Vaccination and immune memory'};
+    const names = {microbe:'Specimen notes',observation:'Observation comparison',route:'Toxin pathway',body:'Muscle effects',vaccination:'How vaccines work'};
     document.querySelector('#discovery-status').textContent = `${names[id]} explored. ${completed.size} of ${totalActivities} optional activities explored. You can continue to the next topic at any time.`;
   }
 
@@ -42,10 +42,10 @@
   }));
 
   const stops = [
-    {label:'STOP 01 / ENTRY',title:'A break in the barrier',text:'Intact skin helps keep microbes out. A cut or puncture can let environmental spores enter. A wound does not automatically mean someone will develop tetanus.'},
-    {label:'STOP 02 / AT THE WOUND',title:'The bacterium makes the toxin',text:'If conditions allow, spores become growing bacteria in a low-oxygen wound. The bacteria release toxin. This is where the organism and its travelling product part ways.'},
-    {label:'STOP 03 / ALONG NERVES',title:'Follow the toxin—not the bacterium',text:'Toxin is taken into motor nerve endings and transported toward the spinal cord and brainstem. A hand injury and a tight jaw can be connected through the nervous system.'},
-    {label:'STOP 04 / NERVE CONTROL',title:'The normal brake is disrupted',text:'The toxin prevents release of inhibitory chemical messengers. Without normal braking, motor output can become excessive. Muscles may stay tight or spasm.'}
+    {title:'A break in the skin', text:'A cut or puncture can let spores in. A wound does not automatically cause tetanus.'},
+    {title:'The toxin is made', text:'Bacteria can grow where there is little oxygen. They make toxin at the wound.'},
+    {title:'The toxin moves along nerves', text:'The toxin moves toward the spinal cord and brainstem.'},
+    {title:'The relax signal is blocked', text:'Without that signal, muscles can stay tight or spasm.'}
   ];
   // These images are reproduced from documented human-created scientific sources.
   const routeImages = [
@@ -62,9 +62,9 @@
       visited.route.add(index);
       document.querySelectorAll('[data-route-stop]').forEach(control => control.setAttribute('aria-pressed',String(control===button)));
       const note = document.querySelector('#route-note');
-      note.querySelector('.mini-label').textContent = stop.label;
       note.querySelector('h3').textContent = stop.title;
       note.querySelector('p').textContent = stop.text;
+      note.hidden = false;
       const artwork = routeImages[index];
       document.querySelector('#route-detail').hidden = false;
       const image = document.querySelector('#route-detail-image');
@@ -78,8 +78,10 @@
       if (artwork.license) license.href = artwork.license;
       else license.removeAttribute('href');
 
-      document.querySelector('#route-progress').textContent = `${visited.route.size} of 4 stops inspected${visited.route.size===4?' — from a wound to a change in nerve control.':''}`;
-      if (visited.route.size===4) completeActivity('route');
+      const progress = document.querySelector('#route-progress');
+      progress.textContent = `${visited.route.size} of ${stops.length} stops explored.`;
+      progress.hidden = false;
+      if (visited.route.size === stops.length) completeActivity('route');
     });
   });
 
@@ -97,25 +99,11 @@
     if (visited.body.size===3) completeActivity('body');
   }));
 
-  const vaccineStages = {
-    practice:{label:'STAGE 01 / PRACTICE',title:'Practice recognizing the toxin.',text:'The toxoid trains your immune system without causing tetanus.'},
-    memory:{label:'STAGE 02 / REMEMBER',title:'Build antibodies and immune memory.',text:'Antibodies can block the toxin before it reaches your nerves. Immune memory helps your body respond again later.'},
-    boosters:{label:'STAGE 03 / REFRESH',title:'Keep protection up to date.',text:'Antibody levels can drop over time. A booster prompts your body to make more.'}
-  };
-  document.querySelector('.vaccine-controls').hidden = false;
-  document.querySelectorAll('[data-vaccine-phase]').forEach(button => button.addEventListener('click', () => {
-    const id = button.dataset.vaccinePhase;
-    visited.vaccination.add(id);
-    document.querySelectorAll('[data-vaccine-phase]').forEach(control => control.setAttribute('aria-pressed',String(control===button)));
-    document.querySelectorAll('[data-immune-step]').forEach(step => step.classList.toggle('current',step.dataset.immuneStep===id));
-    const stage = vaccineStages[id];
-    const note = document.querySelector('#vaccine-stage-note');
-    note.querySelector('.mini-label').textContent = stage.label;
-    note.querySelector('h3').textContent = stage.title;
-    note.querySelector('p').textContent = stage.text;
-    document.querySelector('#vaccine-phase-status').textContent = `${visited.vaccination.size} of 3 immune-memory stages explored.`;
-    if (visited.vaccination.size===3) completeActivity('vaccination');
-  }));
+  const vaccineExplanation = document.querySelector('#vaccine-explanation');
+  document.querySelector('[data-activity-badge="vaccination"]').hidden = false;
+  vaccineExplanation.addEventListener('toggle', () => {
+    if (vaccineExplanation.open) completeActivity('vaccination');
+  });
 
   const form = document.querySelector('#observation-form');
   const input = document.querySelector('#observation-input');

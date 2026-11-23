@@ -166,5 +166,69 @@
     "rights_note": "User-supplied screenshot from the requested source page. Original copyright and reuse terms were not independently verified. This file is not covered by the OpenStax or OpenMoji licences.",
     "modifications": "Original PNG bytes preserved. CSS excludes the last 5 right-edge pixels (fragments of an adjacent figure), while keeping the nervous-system drawing. Full uploaded image is linked.",
     "sha256": "c5520ca50ad37724f612a77a8e03068ee3526c6be95c3dc2a2ebc16e818b1237"
+  },
+  {
+    "file": "openstax-mouth-exam.jpg",
+    "title": "Neurological Exam, left photograph",
+    "creator": "U.S. Department of Defense (OpenStax figure credit)",
+    "book": "Anatomy and Physiology 2e",
+    "source_page": "https://raw.githubusercontent.com/openstax/osbooks-anatomy-physiology/f273762340768a5f50e833c876e40b5a9c565da1/modules/m46593/index.cnxml",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-anatomy-physiology/f273762340768a5f50e833c876e40b5a9c565da1/media/1600_%20Examination_of_the_Oral_Cavity-02.jpg",
+    "source_commit": "f273762340768a5f50e833c876e40b5a9c565da1",
+    "license": "CC BY-NC-SA 4.0 (OpenStax figure)",
+    "modifications": "Original two-photo JPG retained. The mouth examination on the left is displayed using CSS.",
+    "sha256": "81d76717ee79fd4b8ea3420186e9dbe4736c5544d33c167c9db383325b5126b6",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  },
+  {
+    "file": "openstax-soil-scientist.jpg",
+    "title": "Soil scientist studying a soil profile",
+    "creator": "United States Department of Agriculture",
+    "book": "Biology 2e",
+    "source_page": "https://raw.githubusercontent.com/openstax/osbooks-biology-bundle/3a82246ab3ba83a3a273339d8bd2278f1b15f5ba/modules/m66604/index.cnxml",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-biology-bundle/3a82246ab3ba83a3a273339d8bd2278f1b15f5ba/media/Figure_31_02_04.jpg",
+    "source_commit": "3a82246ab3ba83a3a273339d8bd2278f1b15f5ba",
+    "license": "CC BY-NC-SA 4.0 (OpenStax edition)",
+    "modifications": "Original textbook JPG retained. Displayed with CSS cropping.",
+    "sha256": "f676db52e87c594e7c8206e5c8b6f83bc53675a5d8bdfee9ff65e4713e669db5",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  },
+  {
+    "file": "openstax-hospital-emergency.jpg",
+    "title": "Saratoga Hospital emergency entrance, Saratoga Springs NY",
+    "creator": "Peter/Flickr",
+    "book": "Population Health",
+    "source_page": "https://raw.githubusercontent.com/openstax/osbooks-nursing-external-bundle/128c6c3e0ee66850bd8cbb3aa02be736f10db74e/modules/m00127/index.cnxml",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-nursing-external-bundle/128c6c3e0ee66850bd8cbb3aa02be736f10db74e/media/PH_Figure_05_02_004.jpg",
+    "source_commit": "128c6c3e0ee66850bd8cbb3aa02be736f10db74e",
+    "license": "CC BY 2.0",
+    "modifications": "Original textbook JPG retained. Displayed with CSS cropping.",
+    "sha256": "b8b6bc7e18c8c09343b2d7a039863324bad7df319a9fe0c5a38d0a2397f4178e",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  {
+    "file": "openstax-hospital-discharge.jpg",
+    "title": "Arvin McCray, first COVID-19 patient goes home aft 50 days",
+    "creator": "Milwaukee VA Medical Center/Flickr",
+    "book": "Population Health",
+    "source_page": "https://raw.githubusercontent.com/openstax/osbooks-nursing-external-bundle/128c6c3e0ee66850bd8cbb3aa02be736f10db74e/modules/m00344/index.cnxml",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-nursing-external-bundle/128c6c3e0ee66850bd8cbb3aa02be736f10db74e/media/PH_Figure_30_01_002.jpg",
+    "source_commit": "128c6c3e0ee66850bd8cbb3aa02be736f10db74e",
+    "license": "Public Domain (per OpenStax caption)",
+    "modifications": "Original textbook JPG retained. Displayed with CSS cropping.",
+    "sha256": "42946c24d64a164133f1a52c603336d8a86e7ab9f3d709e98869035de0799ab5"
+  },
+  {
+    "file": "openstax-vaccination-photo.jpg",
+    "title": "A healthcare professional gives a meningococcal vaccination",
+    "creator": "James Gathany, Centers for Disease Control and Prevention (OpenStax adaptation)",
+    "book": "Microbiology",
+    "source_page": "https://raw.githubusercontent.com/openstax/osbooks-microbiology/ccd8e2339acd2a31c0008eef93bb9f71eb2e57c7/modules/m58941/index.cnxml",
+    "source_file": "https://raw.githubusercontent.com/openstax/osbooks-microbiology/ccd8e2339acd2a31c0008eef93bb9f71eb2e57c7/media/OSC_Microbio_26_02_teen.jpg",
+    "source_commit": "ccd8e2339acd2a31c0008eef93bb9f71eb2e57c7",
+    "license": "CC BY-NC-SA 4.0 (OpenStax adaptation)",
+    "modifications": "Original textbook JPG retained. Displayed with CSS cropping.",
+    "sha256": "aaff32462aa91db1e167f3da1c03dd97b2e382289e58b7b791794f827051adad",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
   }
 ]
