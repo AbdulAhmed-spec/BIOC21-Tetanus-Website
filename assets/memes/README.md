@@ -9,3 +9,13 @@ These files were supplied by the project group in ZIP attachments and paired wit
 | `vaccination-choice.jpg` | Question 3: vaccination | `mqdefault.zip` / `mqdefault.jpg` | `40c206d1d5de0ecfcada727d8489a782fbf960c71bc1c582435edfdadee2532a` |
 
 All three supplied files are static images (one frame each). The interface identifies them as memes and does not pretend that they have video/audio playback. Original creators, source URLs and reuse licences were not provided. They are user-provided assets and are not covered by the OpenStax image licence.
+
+## Memes in the lessons
+
+The project group also supplied these three single-frame images. The site displays the full images using CSS sizing. The source files are unchanged.
+
+| Website asset | Lesson | Supplied archive / member | SHA-256 |
+| --- | --- | --- | --- |
+| `mitochondria.jpg` | Cells: ATP and mitochondria | `mitochondria.zip` / `mitochondria.jpg` | `c103d555e98edfd4af095136a5cddad2f832e8b052504125a17c0196ce0bd2d9` |
+| `math-lady.jpg` | Cells: vesicles and message release | `Math_Lady_meme.zip` / `Math_Lady_meme.jpg` | `7a44f705179e130e9cbecd1ba05c0589657cc6d288887fb768093ccd894c203a` |
+| `happy-cat.gif` | Transmission: the blocked nerve message | `happy-cat.zip` / `happy-cat.gif` | `4768fae442c78aaa43a93b4038fa885bfa22318a1637b567235cd05b430fd537` |

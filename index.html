@@ -7,11 +7,11 @@
   <meta name="theme-color" content="#101d32">
   <title>Tetanus, up close | BIOC21</title>
   <link rel="icon" href="assets/images/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=visible-reading-1">
+  <link rel="stylesheet" href="styles.css?v=lesson-memes-2">
   <script src="script.js?v=visible-reading-1" defer></script>
-  <script src="activities.js?v=visible-reading-1" defer></script>
+  <script src="activities.js?v=lesson-memes-1" defer></script>
   <script src="reels.js?v=science-break-1" defer></script>
-  <script src="doctor-case.js?v=doctor-case-1" defer></script>
+  <script src="doctor-case.js?v=lesson-memes-1" defer></script>
   <script src="cells.js?v=cell-tetanus-diagram-1" defer></script>
 </head>
 <body>
@@ -111,6 +111,53 @@
               <p class="cell-comparison"><strong>What about plant cells?</strong> They share many of these parts. Plant cells also have a cell wall; green plant cells have chloroplasts for photosynthesis, and most plant cells have a large central vacuole. Human cells have no cell wall or chloroplasts.</p>
               <p class="cell-comparison"><strong>And the bacterium?</strong> <i>C. tetani</i> is a single-celled organism. It has a membrane, cytoplasm and ribosomes, but no nucleus or other membrane-bound organelles. This animal-cell diagram represents the kind of cells in your body.</p>
             </section>
+            <div class="cell-meme-checks">
+              <section class="activity meme-check" id="meme-mitochondria" aria-labelledby="meme-mitochondria-title">
+                <div class="meme-check-post">
+                  <h3 id="meme-mitochondria-title">While they’re out partying BTW</h3>
+                  <img class="meme-check-image" src="assets/memes/mitochondria.jpg" width="500" height="500" alt="Meme showing a cutaway illustration of a mitochondrion." loading="lazy">
+                  <div class="meme-dialogue">
+                    <p><strong>Mitochondria:</strong> “I’m literally carrying this entire cell with my ATP production. 💪⚡”</p>
+                    <p><strong>Tetanus toxin:</strong> Disrupting nerve-cell communication.</p>
+                    <p><strong>Mitochondria:</strong> “And y’all are out partying BTW?!” 😭💀</p>
+                  </div>
+                </div>
+                <form class="lesson-quiz" data-meme-check="C">
+                  <fieldset disabled>
+                    <legend>Why are mitochondria important for nerve cells, even when tetanus toxin disrupts their communication?</legend>
+                    <label class="quiz-choice"><input type="radio" name="meme-mitochondria-answer" value="A"><span class="quiz-choice-letter" aria-hidden="true">A</span><span>They make neurotransmitters that destroy the toxin.</span></label>
+                    <label class="quiz-choice"><input type="radio" name="meme-mitochondria-answer" value="B"><span class="quiz-choice-letter" aria-hidden="true">B</span><span>They stop the toxin from entering the nerve cell.</span></label>
+                    <label class="quiz-choice"><input type="radio" name="meme-mitochondria-answer" value="C"><span class="quiz-choice-letter" aria-hidden="true">C</span><span>They make ATP, which gives the cell energy to work and communicate.</span></label>
+                    <label class="quiz-choice"><input type="radio" name="meme-mitochondria-answer" value="D"><span class="quiz-choice-letter" aria-hidden="true">D</span><span>They store the cell’s DNA instructions for releasing neurotransmitters.</span></label>
+                  </fieldset>
+                  <button class="activity-action" type="submit" disabled hidden>Check answer</button>
+                  <div class="quiz-feedback" role="status" aria-atomic="true"><div hidden><p></p></div></div>
+                  <p class="meme-check-answer" data-meme-answer><strong>Answer C.</strong> <span>Mitochondria make ATP to power cell work. Tetanus toxin disrupts how some nerve cells release messages.</span></p>
+                </form>
+              </section>
+              <section class="activity meme-check" id="meme-vesicle-release" aria-labelledby="meme-vesicle-release-title">
+                <div class="meme-check-post">
+                  <h3 id="meme-vesicle-release-title">The math ain’t mathing</h3>
+                  <img class="meme-check-image" src="assets/memes/math-lady.jpg" width="390" height="255" alt="Four panels of a puzzled woman surrounded by math equations." loading="lazy">
+                  <div class="meme-dialogue">
+                    <p><strong>Neuron:</strong> Neurotransmitters? ✅ Vesicles? ✅ Release? ❌</p>
+                    <p><strong>Neuron:</strong> “The math ain’t mathing.” 😭</p>
+                  </div>
+                </div>
+                <form class="lesson-quiz" data-meme-check="A">
+                  <fieldset disabled>
+                    <legend>Why can’t the neurotransmitters leave the nerve cell normally?</legend>
+                    <label class="quiz-choice"><input type="radio" name="meme-vesicle-release-answer" value="A"><span class="quiz-choice-letter" aria-hidden="true">A</span><span>Vesicles can’t join with the cell membrane properly.</span></label>
+                    <label class="quiz-choice"><input type="radio" name="meme-vesicle-release-answer" value="B"><span class="quiz-choice-letter" aria-hidden="true">B</span><span>The nucleus has disappeared.</span></label>
+                    <label class="quiz-choice"><input type="radio" name="meme-vesicle-release-answer" value="C"><span class="quiz-choice-letter" aria-hidden="true">C</span><span>The cell has stopped making DNA.</span></label>
+                    <label class="quiz-choice"><input type="radio" name="meme-vesicle-release-answer" value="D"><span class="quiz-choice-letter" aria-hidden="true">D</span><span>The neurotransmitters have turned into ATP.</span></label>
+                  </fieldset>
+                  <button class="activity-action" type="submit" disabled hidden>Check answer</button>
+                  <div class="quiz-feedback" role="status" aria-atomic="true"><div hidden><p></p></div></div>
+                  <p class="meme-check-answer" data-meme-answer><strong>Answer A.</strong> <span>The toxin stops message-carrying vesicles from joining with the cell membrane, so their chemical messages can’t be released normally.</span></p>
+                </form>
+              </section>
+            </div>
             <section class="cell-organization" id="cell-organization" aria-labelledby="cell-organization-title">
               <h3 id="cell-organization-title">How does one cell connect to your whole body?</h3>
               <p>Organelles work inside cells. Specialized cells work together in tissues, organs and organ systems. Follow one example through your nervous system:</p>
@@ -150,10 +197,28 @@
               <ol class="pathway"><li><button type="button" class="pathway-stop" data-route-stop="0" aria-pressed="false" disabled><span class="step-number">01</span><img src="assets/images/sourced/openstax-skin-layers.jpg" alt="OpenStax illustration of intact skin layers, showing the barrier a wound can break" loading="lazy"><strong>Spores get in</strong><span class="pathway-summary">A cut or puncture lets spores enter.</span></button></li><li><button type="button" class="pathway-stop" data-route-stop="1" aria-pressed="false" disabled><span class="step-number">02</span><img src="assets/images/wound-poster.jpg" alt="Still from Drew Berry’s 2014 wound inflammation animation, showing an injured skin surface; not tetanus-specific" loading="lazy"><strong>Bacteria make toxin</strong><span class="pathway-summary">Bacteria can grow in a wound with little oxygen.</span></button></li><li><button type="button" class="pathway-stop" data-route-stop="2" aria-pressed="false" disabled><span class="step-number">03</span><img src="assets/images/sourced/openstax-neuron.jpg" alt="OpenStax illustration of a neuron with labelled cell body, axon, myelin and synapses" loading="lazy"><strong>Toxin travels</strong><span class="pathway-summary">It moves along nerves.</span></button></li><li><button type="button" class="pathway-stop" data-route-stop="3" aria-pressed="false" disabled><span class="step-number">04</span><img src="assets/images/sourced/openstax-synapse.jpg" alt="OpenStax diagram of a normal chemical synapse, with neurotransmitter-containing vesicles and a synaptic cleft" loading="lazy"><strong>Muscles stay tight</strong><span class="pathway-summary">The toxin blocks signals that help muscles relax.</span></button></li></ol>
               <div class="route-note" id="route-note" role="status" hidden><h3></h3><p></p></div><p class="activity-status" id="route-progress" hidden>0 of 4 stops inspected</p><figure class="sourced-figure route-detail" id="route-detail" hidden><img id="route-detail-image" alt=""><figcaption><span id="route-detail-caption"></span> <a id="route-detail-source" target="_blank" rel="noopener noreferrer">Source</a> <span id="route-detail-license-wrapper">· <a id="route-detail-license" target="_blank" rel="noopener noreferrer">Licence</a></span> · <a id="route-detail-full" target="_blank" rel="noopener noreferrer">Open full-size image</a></figcaption></figure>
             </section>
-            <figure class="topic-meme message-meme" id="nervous-system">
-              <div class="meme-messages"><p><strong>Nerves:</strong> “Hey muscles, time to relax.”</p><p><span aria-hidden="true">⚠</span> Message blocked by tetanus toxin</p></div>
-              <figcaption>Without that message, muscles can tighten or spasm.</figcaption>
-            </figure>
+            <section class="activity meme-check meme-check-wide" id="nervous-system" aria-labelledby="nervous-system-title">
+              <div class="meme-check-post">
+                <h3 id="nervous-system-title">POV: Tetanus toxin enters the chat</h3>
+                <img class="meme-check-image" src="assets/memes/happy-cat.gif" width="640" height="630" alt="Close-up of a wide-eyed tabby cat with its mouth open." loading="lazy">
+                <div class="meme-dialogue">
+                  <p><strong>Nerve cell:</strong> “Bro, I was so close to sending it!”</p>
+                  <p><strong>Tetanus toxin:</strong> “Ahhh, almost, almost.” 😭</p>
+                </div>
+              </div>
+              <form class="lesson-quiz" data-meme-check="B">
+                <fieldset disabled>
+                  <legend>Why can’t the nerve cell send its message normally?</legend>
+                  <label class="quiz-choice"><input type="radio" name="nervous-system-answer" value="A"><span class="quiz-choice-letter" aria-hidden="true">A</span><span>The nucleus loses all its DNA.</span></label>
+                  <label class="quiz-choice"><input type="radio" name="nervous-system-answer" value="B"><span class="quiz-choice-letter" aria-hidden="true">B</span><span>The toxin blocks the release of chemical messages.</span></label>
+                  <label class="quiz-choice"><input type="radio" name="nervous-system-answer" value="C"><span class="quiz-choice-letter" aria-hidden="true">C</span><span>The mitochondria stop producing energy.</span></label>
+                  <label class="quiz-choice"><input type="radio" name="nervous-system-answer" value="D"><span class="quiz-choice-letter" aria-hidden="true">D</span><span>The cell membrane disappears.</span></label>
+                </fieldset>
+                <button class="activity-action" type="submit" disabled hidden>Check answer</button>
+                <div class="quiz-feedback" role="status" aria-atomic="true"><div hidden><p></p></div></div>
+                <p class="meme-check-answer" data-meme-answer><strong>Answer B.</strong> <span>The toxin blocks messages that help muscles relax. Without those messages, muscles can stay tight or spasm.</span></p>
+              </form>
+            </section>
             <section class="deeper information-section" id="tissues" aria-labelledby="tissues-title"><h3 class="information-heading" id="tissues-title">Which tissues does tetanus affect?</h3><div class="details-body"><dl class="definition-grid"><div><dt>Nervous tissue</dt><dd>The toxin’s main target. It disrupts signals that help muscles relax.</dd></div><div><dt>Muscle tissue</dt><dd>Muscles respond to the disrupted signals. Facial muscles, other skeletal muscles, and breathing muscles can be affected.</dd></div><div><dt>Damaged tissue</dt><dd>Low-oxygen areas in a wound can let <i>C. tetani</i> grow and make toxin.</dd></div></dl></div></section>
             <section class="deeper information-section" id="science-words" aria-labelledby="science-words-title"><h3 class="information-heading" id="science-words-title">What do these science words mean?</h3><div class="details-body"><dl class="definition-grid"><div><dt>Tetanospasmin</dt><dd>The scientific name for tetanus toxin.</dd></div><div><dt>Motor neuron</dt><dd>A nerve cell that helps tell muscles to move. The toxin enters the endings of these cells.</dd></div><div><dt>Anaerobic</dt><dd>Without oxygen. Tetanus bacteria grow in low-oxygen conditions.</dd></div></dl></div></section>
             <div class="concept-bridge"><p class="optional-break">Want a break? <a href="#reel-built-different">Try the “built differently” meme</a>.</p><nav class="topic-flow" aria-label="Continue learning"><a class="previous-topic" href="#watch" aria-label="Back to How does tetanus get in?">← Back</a><a class="next-topic" href="#symptoms"><span>NEXT</span>What are the symptoms? <svg class="arrow" aria-hidden="true" viewBox="0 0 20 20"><path d="M3 10h13m-5-5 5 5-5 5"/></svg></a></nav></div>
@@ -213,16 +278,16 @@
             <section class="activity doctor-case-activity" aria-labelledby="doctor-case-question">
               <div class="activity-heading"><div><span class="activity-tag">YOUR TURN / CONNECT THE CASE</span><h3 id="doctor-case-question">Which type of tetanus does the patient have?</h3></div><span class="activity-badge" id="doctor-case-badge">CHOOSE &amp; CHECK</span></div>
               <p class="activity-instruction" id="doctor-case-instruction">Choose one answer, then check it.</p>
-              <form id="doctor-case-form">
+              <form class="lesson-quiz" id="doctor-case-form">
                 <fieldset disabled aria-describedby="doctor-case-instruction"><legend class="sr-only">Which type of tetanus does the patient have?</legend>
-                  <label class="doctor-case-choice"><input type="radio" name="doctor-case-type" value="generalized" required><span class="doctor-choice-letter" aria-hidden="true">A</span><span>Generalized tetanus</span></label>
-                  <label class="doctor-case-choice"><input type="radio" name="doctor-case-type" value="localized" required><span class="doctor-choice-letter" aria-hidden="true">B</span><span>Localized tetanus</span></label>
-                  <label class="doctor-case-choice"><input type="radio" name="doctor-case-type" value="cephalic" required><span class="doctor-choice-letter" aria-hidden="true">C</span><span>Cephalic tetanus</span></label>
-                  <label class="doctor-case-choice"><input type="radio" name="doctor-case-type" value="neonatal" required><span class="doctor-choice-letter" aria-hidden="true">D</span><span>Neonatal tetanus</span></label>
+                  <label class="quiz-choice"><input type="radio" name="doctor-case-type" value="generalized" required><span class="quiz-choice-letter" aria-hidden="true">A</span><span>Generalized tetanus</span></label>
+                  <label class="quiz-choice"><input type="radio" name="doctor-case-type" value="localized" required><span class="quiz-choice-letter" aria-hidden="true">B</span><span>Localized tetanus</span></label>
+                  <label class="quiz-choice"><input type="radio" name="doctor-case-type" value="cephalic" required><span class="quiz-choice-letter" aria-hidden="true">C</span><span>Cephalic tetanus</span></label>
+                  <label class="quiz-choice"><input type="radio" name="doctor-case-type" value="neonatal" required><span class="quiz-choice-letter" aria-hidden="true">D</span><span>Neonatal tetanus</span></label>
                 </fieldset>
                 <button class="activity-action" type="submit" disabled hidden>Check my answer</button>
               </form>
-              <div class="doctor-case-feedback" id="doctor-case-feedback" role="status" aria-live="polite" aria-atomic="true"><div hidden><h4 id="doctor-case-feedback-title"></h4><p id="doctor-case-feedback-text"></p></div></div>
+              <div class="quiz-feedback" id="doctor-case-feedback" role="status" aria-live="polite" aria-atomic="true"><div hidden><h4 id="doctor-case-feedback-title"></h4><p id="doctor-case-feedback-text"></p></div></div>
               <noscript><section class="deeper information-section" aria-labelledby="doctor-answer-title"><h4 class="information-heading" id="doctor-answer-title">Answer and explanation</h4><div class="details-body"><p><strong>Generalized tetanus.</strong> This form involves stiffness and spasms across multiple body regions. The toxin disrupts nerve signals that help muscles relax.</p></div></section></noscript>
             </section>
             <div class="concept-bridge"><nav class="topic-flow" aria-label="Continue learning"><a class="previous-topic" href="#symptoms" aria-label="Back to What are the symptoms?">← Back</a><a class="next-topic" href="#recovery"><span>NEXT</span>How do people recover? <svg class="arrow" aria-hidden="true" viewBox="0 0 20 20"><path d="M3 10h13m-5-5 5 5-5 5"/></svg></a></nav></div>

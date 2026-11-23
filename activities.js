@@ -116,4 +116,35 @@
     document.querySelector('#observation-status').textContent = 'Science note opened. Compare the ideas, then follow the toxin in the next topic. Your response has not been automatically graded.';
     completeActivity('observation');
   });
+
+  document.querySelectorAll('[data-meme-check]').forEach(quiz => {
+    const submit = quiz.querySelector('button[type="submit"]');
+    const result = quiz.querySelector('.quiz-feedback > div');
+    const answer = quiz.querySelector('[data-meme-answer]');
+    const explanation = answer.querySelector('span').textContent;
+    const message = result.querySelector('p');
+    quiz.querySelector('fieldset').disabled = false;
+    submit.hidden = false;
+    answer.hidden = true;
+
+    function updateChoices() {
+      submit.disabled = !quiz.querySelector('input:checked');
+      result.hidden = true;
+      quiz.querySelectorAll('.quiz-choice').forEach(choice => choice.classList.remove('is-correct', 'is-incorrect'));
+    }
+
+    updateChoices();
+    quiz.addEventListener('change', updateChoices);
+    quiz.addEventListener('submit', event => {
+      event.preventDefault();
+      const selection = quiz.querySelector('input:checked');
+      if (!selection) return;
+      updateChoices();
+      const correct = selection.value === quiz.dataset.memeCheck;
+      selection.closest('.quiz-choice').classList.add(correct ? 'is-correct' : 'is-incorrect');
+      result.classList.toggle('correct', correct);
+      result.hidden = false;
+      message.textContent = correct ? `Correct. ${explanation}` : 'Try again. Choose another answer.';
+    });
+  });
 })();

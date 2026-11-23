@@ -105,10 +105,6 @@ figure{margin:0;min-width:0}
 .soil-meme figcaption{padding:14px 0}
 .soil-meme p{margin:0 0 4px}
 .soil-meme p:last-child{margin:0}
-.message-meme{display:flex;align-items:center;gap:18px;padding:18px}
-.meme-messages{display:grid;gap:7px;flex:0 0 auto}
-.meme-messages p{margin:0;padding:9px 12px;border-radius:12px 12px 12px 3px;background:#c7dedf;font-size:14px;line-height:1.45}
-.meme-messages p:last-child{justify-self:end;border-radius:12px 12px 3px 12px;background:#f4dfd5;color:#793723;font-size:12px;font-weight:650}
 @media(max-width:550px){
   .fact-grid{grid-template-columns:1fr;gap:10px}
   .fact-card{display:grid;grid-template-columns:minmax(88px,36%) 1fr;align-items:center}
@@ -118,7 +114,6 @@ figure{margin:0;min-width:0}
   .fact-card p{font-size:13px}
   .soil-meme{gap:10px;padding:0 12px}
   .soil-meme img{width:72px;height:76px}
-  .message-meme{display:grid;gap:12px;padding:13px}
 }
 .quick-note{display:flex;align-items:center;gap:24px;padding:20px 24px;border-left:3px solid #79a874;background:#e8ecdf;border-radius:0 10px 10px 0;margin:24px 0}
 .note-label{color:#4b6944;font-size:8px;max-width:100px;flex-shrink:0}
@@ -368,21 +363,38 @@ footer p{margin:0}
 /* Doctor–patient case: listen, connect the symptoms, then check a choice. */
 .doctor-case-media{margin:0 0 28px}
 .doctor-case-media figcaption{font-size:12px;line-height:1.8;color:#526074;margin-top:13px}
-#doctor-case-form fieldset{border:0;margin:0 0 20px;padding:0;min-width:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.doctor-case-choice{position:relative;display:flex;align-items:center;gap:12px;min-height:65px;padding:16px;border:1px solid #bacaba;border-radius:10px;background:var(--cream);color:#2d4557;font-size:15px;line-height:1.6;cursor:pointer}
-.doctor-case-choice input{position:absolute;width:1px;height:1px;margin:0;clip-path:inset(50%);overflow:hidden}
-.doctor-choice-letter{display:grid;place-items:center;width:28px;height:28px;flex-shrink:0;border:1px solid #9dafae;border-radius:50%;font-size:12px;font-weight:700}
-.doctor-case-choice:has(input:checked){border-color:#426e8c;background:#dce8f1}
-.doctor-case-choice:has(input:focus-visible){outline:3px solid #426e8c;outline-offset:3px}
-.doctor-case-choice.is-correct:has(input:checked){border-color:#557c46;background:#dcebcf}
-.doctor-case-choice.is-incorrect:has(input:checked){border-color:#a1644c;background:#f3e0d4}
-#doctor-case-form .activity-action:disabled{opacity:.55;cursor:default}
-.doctor-case-feedback>div{border-left:3px solid #a1644c;border-radius:0 8px 8px 0;background:#f3e5da;padding:20px;margin-top:20px}
-.doctor-case-feedback>div.correct{border-color:#557c46;background:#dcebcf}
-.doctor-case-feedback h4{font-size:16px;line-height:1.5;margin:0 0 10px}
-.doctor-case-feedback p{font-size:14px;line-height:1.8;margin:0;color:#405363}
-@media(max-width:1100px){#doctor-case-form fieldset{grid-template-columns:1fr}.doctor-case-activity .activity-heading{flex-wrap:wrap}}
-@media(max-width:760px){.doctor-case-choice{padding:13px;font-size:14px}.doctor-case-feedback>div{padding:16px}.doctor-case-feedback p{font-size:13px}}
+.lesson-quiz fieldset{border:0;margin:0 0 20px;padding:0;min-width:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quiz-choice{position:relative;display:flex;align-items:center;gap:12px;min-height:65px;padding:16px;border:1px solid #bacaba;border-radius:10px;background:var(--cream);color:#2d4557;font-size:15px;line-height:1.6;cursor:pointer}
+.quiz-choice input{position:absolute;width:1px;height:1px;margin:0;clip-path:inset(50%);overflow:hidden}
+.quiz-choice-letter{display:grid;place-items:center;width:28px;height:28px;flex-shrink:0;border:1px solid #9dafae;border-radius:50%;font-size:12px;font-weight:700}
+.quiz-choice:has(input:checked){border-color:#426e8c;background:#dce8f1}
+.quiz-choice:has(input:focus-visible){outline:3px solid #426e8c;outline-offset:3px}
+.quiz-choice.is-correct:has(input:checked){border-color:#557c46;background:#dcebcf}
+.quiz-choice.is-incorrect:has(input:checked){border-color:#a1644c;background:#f3e0d4}
+.lesson-quiz .activity-action:disabled{opacity:.55;cursor:default}
+.quiz-feedback>div{border-left:3px solid #a1644c;border-radius:0 8px 8px 0;background:#f3e5da;padding:20px;margin-top:20px}
+.quiz-feedback>div.correct{border-color:#557c46;background:#dcebcf}
+.quiz-feedback h4{font-size:16px;line-height:1.5;margin:0 0 10px}
+.quiz-feedback p{font-size:14px;line-height:1.8;margin:0;color:#405363}
+@media(max-width:1100px){.lesson-quiz fieldset{grid-template-columns:1fr}.doctor-case-activity .activity-heading{flex-wrap:wrap}}
+@media(max-width:760px){.quiz-choice{padding:13px;font-size:14px}.quiz-feedback>div{padding:16px}.quiz-feedback p{font-size:13px}}
+
+.cell-meme-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
+.cell-meme-checks>.meme-check{margin:0;min-width:0}
+.meme-check-post{padding:16px;border-radius:9px;background:#20364a;color:var(--cream);margin-bottom:16px}
+.meme-check-post h3{font-size:18px;line-height:1.25;margin:0 0 12px}
+.meme-check-image{display:block;width:100%;height:clamp(160px,22vw,230px);object-fit:contain;margin:0 0 12px;background:#152637;border-radius:6px}
+.meme-check-wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:20px}
+.meme-check-wide .meme-check-post{margin:0}
+.meme-dialogue p{font-size:13px;line-height:1.55;margin:0 0 6px}
+.meme-dialogue p:last-child{margin:0}
+.meme-check .lesson-quiz legend{padding:0;margin:0 0 12px;font-size:15px;font-weight:700;line-height:1.4}
+.meme-check .lesson-quiz fieldset{gap:8px;margin-bottom:12px}
+.meme-check .lesson-quiz fieldset{grid-template-columns:1fr}
+.meme-check .quiz-choice{min-height:44px;font-size:13px;padding:9px 10px}
+.meme-check .quiz-choice-letter{width:23px;height:23px;font-size:10px}
+.meme-check-answer{font-size:14px;margin:12px 0 0}
+@media(max-width:900px){.cell-meme-checks,.meme-check-wide{grid-template-columns:1fr}.meme-check-image{height:auto;max-height:230px}}
 
 /* Clear Back/Next links inside the existing topic bridge. */
 .topic-flow{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #bdcbb6;margin-top:19px;padding-top:12px}

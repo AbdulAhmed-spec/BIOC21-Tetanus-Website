@@ -4,7 +4,7 @@
   const form = document.querySelector('#doctor-case-form');
   if (!form) return;
   const submit = form.querySelector('button[type="submit"]');
-  const choices = [...form.querySelectorAll('.doctor-case-choice')];
+  const choices = [...form.querySelectorAll('.quiz-choice')];
   const feedback = document.querySelector('#doctor-case-feedback > div');
   const heading = document.querySelector('#doctor-case-feedback-title');
   const explanation = document.querySelector('#doctor-case-feedback-text');
@@ -32,7 +32,7 @@
     if (!selected || !Object.hasOwn(responses, selected.value)) return;
     const correct = selected.value === 'generalized';
     choices.forEach(choice => choice.classList.remove('is-correct', 'is-incorrect'));
-    selected.closest('.doctor-case-choice').classList.add(correct ? 'is-correct' : 'is-incorrect');
+    selected.closest('.quiz-choice').classList.add(correct ? 'is-correct' : 'is-incorrect');
     heading.textContent = correct ? 'Correct — generalized tetanus.' : 'Not quite. Compare the clues.';
     explanation.textContent = responses[selected.value];
     feedback.classList.toggle('correct', correct);
